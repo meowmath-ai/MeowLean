@@ -1,0 +1,136 @@
+--- a/UnitFractions/ForMathlib/Misc.lean
++++ b/UnitFractions/ForMathlib/Misc.lean
+@@ -112 +112 @@
+-  simpa using (Finset.one_le_prod (s := s) (f := f) h1)
++  simpa using (Finset.one_le_prod₀ (s := s) (f := f) h1)
+--- a/UnitFractions/ForMathlib/BasicEstimates.lean
++++ b/UnitFractions/ForMathlib/BasicEstimates.lean
+@@ -109 +109 @@
+-  refine Finset.one_le_prod ?_
++  refine Finset.one_le_prod₀ ?_
+@@ -973 +973 @@
+-  exact Finset.prod_le_prod_of_subset_of_one_le h hs hf
++  exact Finset.prod_le_prod_of_subset_of_one_le₀ h hs hf
+@@ -987 +987 @@
+-  refine (Finset.prod_le_prod_of_subset_of_le_one hsubset ?_ ?_).trans ?_
++  refine (Finset.prod_le_prod_of_subset_of_le_one₀ hsubset ?_ ?_).trans ?_
+@@ -999 +999 @@
+-  refine (Finset.prod_le_prod ?_ ?_).trans ((Finset.prod_const K).trans_le ?_)
++  refine (Finset.prod_le_prod₀ ?_ ?_).trans ((Finset.prod_const K).trans_le ?_)
+@@ -1507,0 +1508 @@
++set_option maxHeartbeats 1000000 in
+@@ -1522,14 +1523,15 @@
+-    change HasDerivWithinAt _ (_ + _) _ _
+-    rw [add_comm, ← sub_neg_eq_add, neg_mul_eq_neg_mul]
+-    refine HasDerivWithinAt.sub ?_ ?_
+-    · have hpow : (2⁻¹ : ℝ) - 1 = -1 / 2 := by norm_num
+-      simpa [Set.Ici, id, one_mul, hpow] using
+-        ((hasDerivWithinAt_id y (Set.Ici y)).rpow_const
+-          (p := (1 / 2 : ℝ)) (Or.inl hy'.ne'))
+-    · have hpow : (-1 / 2 : ℝ) - 1 = -3 / 2 := by norm_num
+-      have hpow' : (-2⁻¹ : ℝ) - 1 = -3 / 2 := by norm_num
+-      have hcoef : (-1 / 2 : ℝ) = -2⁻¹ := by norm_num
+-      have hderiv :=
+-        ((hasDerivWithinAt_id y (Set.Ici y)).rpow_const
+-          (p := (-1 / 2 : ℝ)) (Or.inl hy'.ne'))
+-      simpa [Set.Ici, id, one_mul, hpow, hpow', hcoef, neg_mul, mul_assoc] using hderiv
++    have hpos : HasDerivAt (fun t : ℝ => t ^ (1 / 2 : ℝ))
++        (1 / 2 * y ^ (-1 / 2 : ℝ)) y := by
++      have he : (1 / 2 : ℝ) - 1 = -1 / 2 := by norm_num
++      simpa only [he] using
++        (Real.hasDerivAt_rpow_const (p := (1 / 2 : ℝ)) (Or.inl hy'.ne'))
++    have hneg : HasDerivAt (fun t : ℝ => t ^ (-1 / 2 : ℝ))
++        (-1 / 2 * y ^ (-3 / 2 : ℝ)) y := by
++      have he : (-1 / 2 : ℝ) - 1 = -3 / 2 := by norm_num
++      simpa only [he] using
++        (Real.hasDerivAt_rpow_const (p := (-1 / 2 : ℝ)) (Or.inl hy'.ne'))
++    have hd : 1 / 2 * y ^ (-1 / 2 : ℝ) - (-1 / 2 * y ^ (-3 / 2 : ℝ)) = g' y := by
++      dsimp only [g']
++      ring
++    rw [← hd]
++    exact (hpos.sub hneg).hasDerivWithinAt
+@@ -2282 +2284,2 @@
+-    exact mul_ne_zero hy0.ne' (pow_ne_zero _ (Real.log_pos (by linarith)).ne')
++    change y * log y ^ (2 : ℕ) ≠ 0
++    exact mul_ne_zero hy0.ne' (pow_ne_zero 2 (Real.log_pos (by linarith)).ne')
+@@ -2326,5 +2329,5 @@
+-    refine ContinuousOn.div ?_ ?_ ?_
+-    · exact (continuousOn_inv₀.mono hne).neg
+-    · exact (Real.continuousOn_log.mono hne).pow _
+-    · intro y hy
+-      exact pow_ne_zero _ (Real.log_pos (one_lt_two.trans_le hy)).ne'
++    have hn : ContinuousOn (fun y : ℝ => -y⁻¹) (Ici (2 : ℝ)) :=
++      (continuousOn_inv₀.mono hne).neg
++    have hd : ContinuousOn (fun y : ℝ => log y ^ (2 : ℕ)) (Ici (2 : ℝ)) :=
++      (Real.continuousOn_log.mono hne).pow 2
++    exact hn.div hd (fun y hy => pow_ne_zero 2 (Real.log_pos (one_lt_two.trans_le hy)).ne')
+@@ -2351 +2354,4 @@
+-      exact (my_func2_continuous_on.mono fun y hy ↦ one_lt_two.trans_le hy.1).integrableOn_Icc
++      have hsub : Icc (((2 : ℕ) : ℝ)) x ⊆ Ioi (1 : ℝ) := by
++        intro y hy
++        exact one_lt_two.trans_le (by simpa using hy.1)
++      exact (my_func2_continuous_on.mono hsub).integrableOn_Icc
+@@ -2898 +2904 @@
+-  refine Finset.prod_le_prod (fun i hi => (inv_pos.2 (hpos i (Finset.mem_filter.mp hi).2)).le)
++  refine Finset.prod_le_prod₀ (fun i hi => (inv_pos.2 (hpos i (Finset.mem_filter.mp hi).2)).le)
+--- a/ErdosProblems/Erdos277.lean
++++ b/ErdosProblems/Erdos277.lean
+@@ -317 +317 @@
+-  exact measurable_pi_lambda _ fun p : s => measurable_pi_apply (p : P)
++  exact Measurable.of_eval fun p : s => measurable_pi_apply (p : P)
+@@ -604 +604 @@
+-  apply Finset.prod_le_one
++  apply Finset.prod_le_one₀
+@@ -996 +996 @@
+-      _ ≤ _ := Finset.prod_le_prod
++      _ ≤ _ := Finset.prod_le_prod₀
+--- a/ErdosProblems/Erdos281.lean
++++ b/ErdosProblems/Erdos281.lean
+@@ -820,2 +820,8 @@
+-      unfold haar
+-      simp
++      let L : TopologicalSpace.PositiveCompacts ZHat :=
++        { carrier := Set.univ, isCompact' := isCompact_univ,
++          interior_nonempty' := by simp [Set.Nonempty] }
++      let μ := MeasureTheory.Measure.addHaarMeasure L
++      change ((μ Set.univ)⁻¹ • μ) Set.univ = 1
++      have hL : μ Set.univ = 1 :=
++        MeasureTheory.Measure.addHaarMeasure_self (K₀ := L)
++      rw [hL, inv_one, one_smul, hL]
+@@ -963,2 +969,9 @@
+-      apply MeasureTheory.Integrable.indicator (MeasureTheory.integrable_const 1)
+-      exact hS.preimage (continuous_add_const _ |>.measurable)
++      have hpre : MeasurableSet {x : ZHat | x + (m : ZHat) ∈ S} :=
++        hS.preimage (continuous_add_const (m : ZHat)).measurable
++      have hEq :
++          (fun x : ZHat => if x + (m : ZHat) ∈ S then (1 : ℝ) else 0) =
++            {x : ZHat | x + (m : ZHat) ∈ S}.indicator (fun _ => (1 : ℝ)) := by
++        funext x
++        by_cases hx : x + (m : ZHat) ∈ S <;> simp [Set.indicator_apply, hx]
++      rw [hEq]
++      exact (MeasureTheory.integrable_const (1 : ℝ) (μ := haar)).indicator hpre
+@@ -975 +988 @@
+-          (fun N : ℕ => ∫ x, densSeqZ (fun m => x + (m : ZHat) ∈ S) N ∂haar)
++          (fun N : ℕ => ∫ x, densSeqZ {m : ℤ | x + (m : ZHat) ∈ S} N ∂haar)
+@@ -1008 +1021 @@
+-          ∫ x, densSeqZ (fun m => x + (m : ZHat) ∈ S) N ∂haar =
++          ∫ x, densSeqZ {m : ℤ | x + (m : ZHat) ∈ S} N ∂haar =
+@@ -1060,2 +1073,3 @@
+-        simp only [Ck]
+-        exact Set.biInter_subset_biInter_left (fun i hi => (Nat.lt_of_lt_of_le hi hkl))
++        intro x hx
++        simp only [Ck, Set.mem_iInter] at hx ⊢
++        exact fun i hi => hx i (hi.trans_le hkl)
+--- a/ErdosProblems/Erdos27.lean
++++ b/ErdosProblems/Erdos27.lean
+@@ -1097 +1097 @@
+-        exact Finset.prod_le_prod
++        exact Finset.prod_le_prod₀
+@@ -1769,4 +1769,3 @@
+-    rw [Real.norm_eq_abs, abs_of_nonneg
+-      (inv_nonneg.mpr (by exact_mod_cast hp.pos.le))]
+-    change (p : ℝ)⁻¹ < 1
+-    rw [inv_lt_one₀ (by exact_mod_cast hp.pos)]
++    change ‖(p : ℝ)⁻¹‖ < 1
++    have hp0 : (0 : ℝ) < (p : ℝ) := Nat.cast_pos.mpr hp.pos
++    rw [Real.norm_eq_abs, abs_of_nonneg (inv_nonneg.mpr hp0.le), inv_lt_one₀ hp0]

@@ -22,6 +22,10 @@ lake env lean JustinPrize/JSP000733.lean
 
 The cache command retrieves precompiled Mathlib artifacts. Run the proof commands one at a time, waiting for a successful exit before starting the next. Each command elaborates and kernel-checks its source file and prints its axiom audits. The expected axiom set is `propext`, `Classical.choice`, and `Quot.sound`.
 
+## Supplementary formalization
+
+[JSP-000060 / Erdős 27](solutions/JSP-000060.md) formalizes the fixed-ratio uniform density theorem of Filaseta, Ford, Konyagin, Pomerance, and Yu. The main theorem is `JSP000060.erdos27_fixed_ratio_uniform`.
+
 ## Attribution
 
-[@meowmath-ai](https://github.com/meowmath-ai) led the Lean formalizations in this repository. AI tools assisted with proof drafting, revision, and build diagnostics.
+[@meowmath-ai](https://github.com/meowmath-ai) led the Lean contributions developed in this repository. AI tools assisted with proof drafting, revision, and build diagnostics.
