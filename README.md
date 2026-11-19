@@ -19,3 +19,7 @@ lake env lean JustinPrize/JSP000377.lean
 ~~~
 
 The cache command retrieves precompiled Mathlib artifacts. Run the three proof commands one at a time, waiting for a successful exit before starting the next. Each command elaborates and kernel-checks its source file and prints its axiom audits. The expected axiom set for each of the five printed theorems is `propext`, `Classical.choice`, and `Quot.sound`.
+
+## Attribution
+
+[@meowmath-ai](https://github.com/meowmath-ai) led the Lean formalizations of JSP-000492, JSP-001010, and JSP-000377. AI tools assisted with proof drafting, revision, and build diagnostics.
