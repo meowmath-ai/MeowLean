@@ -1,0 +1,24 @@
+{
+  "repository": "plby/lean-proofs",
+  "commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+  "directory": "src/latest",
+  "sha256": {
+    "ErdosProblems/Erdos1123/BlockBackAndForth.lean": "b451607259c50b501b86c502ffc848e57f774074a4ca49e1061199e15ffc2a01",
+    "ErdosProblems/Erdos1123/CHEnumeration.lean": "40971d0129494cd619f0d480c0c2ba06858f11dd2e3402c77076644436cb621c",
+    "ErdosProblems/Erdos1123/CountableExtension.lean": "4951f23c03f54490f59337ce9bbb4e19b5c1aca763e4c05c056b62fe25235218",
+    "ErdosProblems/Erdos1123/CountableRecursion.lean": "b98702bc3532da2b2444ba7fce4e0c666533efeeda651ffeb3534068a00db29b",
+    "ErdosProblems/Erdos1123/CountableSplitting.lean": "5237d56eb145637b8fa7af2d3338acd0620229d8bf0d421d2764ef3566bd250f",
+    "ErdosProblems/Erdos1123/Coupling.lean": "878eb1e35562f2a85e1d1c92f79c9b40bde4d77aa4ce72632a229f52bd685b97",
+    "ErdosProblems/Erdos1123/CouplingIsomorphism.lean": "275d5e008cdd7ddc3d73e2b146f26665f4b045a8c21206edf33ffdf0dffea66f",
+    "ErdosProblems/Erdos1123/DensityAlgebras.lean": "25ded30b87a59a45647bc49cc071c56c81bfbb96ed5741b9ff4f74a45d8312a9",
+    "ErdosProblems/Erdos1123/Diagonal.lean": "ed7070a71567003b8da5b20191a94c666c7a0f9e3ceed14188be6c203d7f27df",
+    "ErdosProblems/Erdos1123/FiniteProfiles.lean": "2bdd990d864891d83ca2851ea2a6018f36109e505d8ee807c33d31110ab72d94",
+    "ErdosProblems/Erdos1123/FiniteSplitting.lean": "6c83853e0b6347de9ce93d91b50693d020d78ed5ee851c55dfc212654366aa64",
+    "ErdosProblems/Erdos1123/LogarithmicBlocks.lean": "774b228b460800fb301129b2b4aa0be4a59ccbad8fae7ce749a606bff0b8eb4d",
+    "ErdosProblems/Erdos1123/OrdinaryBlocks.lean": "969c5c995cf82e04e8a4b371ff51e274184be97323b83bb8002b2481f031ed59",
+    "ErdosProblems/Erdos1123/RatioLimits.lean": "440c29cca77d32c67109fae21095371eaf0443ab3d687269a17cab4e4940bfcc",
+    "ErdosProblems/Erdos1123/SplitAlgebra.lean": "eb72f0c9dd59b81f2cdb864ed20437c8daf65c441a85ef289e2188a02159b088",
+    "ErdosProblems/Erdos1123/WeightedBlocks.lean": "632bf162078f18d2a340c9754e955abbe650ae909b325411f70c46ad282302af",
+    "ErdosProblems/Erdos1123/WeightedQuotient.lean": "8c8468fc72bfea5f8a79d87a874809d31918262b31022b86343b8daabfffeefa"
+  }
+}
