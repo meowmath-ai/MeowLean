@@ -1,0 +1,6 @@
+import JSP000930ActualHaymanSentence
+
+#check JSP000930.SetLanguage.haymanBound_f
+#check JSP000930.SetLanguage.haymanRefutation_f
+#check JSP000930.SetLanguage.haymanAtAlephTwo_f
+#check JSP000930.SetLanguage.refutesHaymanAtAlephTwo_f

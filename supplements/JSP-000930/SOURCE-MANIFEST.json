@@ -1,0 +1,4114 @@
+{
+  "target": "JSP000930RelativeIndependence",
+  "sourceCount": 478,
+  "terminalSHA256": "a292da92bae3a043c5d5e0a0157e44781db7386334b117b1134eec4fc3dbd09c",
+  "toolchain": "leanprover/lean4:v4.36.0",
+  "mathlib": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "meowlean": "954254a1a399147fcf5128ba125cfd666afcf2e7",
+  "sourceOrder": [
+    {
+      "path": "src/JSP000930PositiveWeightedInjectionGraphs.lean",
+      "sha256": "06828f9d2c870b5590f2c875e2f2208a516a519a1ed9ee0e9952e69743272845",
+      "bytes": 4433,
+      "imports": [
+        "JSP000933BooleanFunctionalGraphs",
+        "Flypitch4.BvmExtras"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveFirstNamedOccurrences.lean",
+      "sha256": "d93029b4de06b4ff93fe678dba5de0f41380eac140284b690382b7a4ffbd3eee",
+      "bytes": 3749,
+      "imports": [
+        "JSP000930PositiveWeightedInjectionGraphs",
+        "JSP000933RelativeChoiceNormalization"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveCohenConditions.lean",
+      "sha256": "8add3cab81a88df5a5dfc4157113d5c4b4d7232ef206bff4ee0ff930733eed47",
+      "bytes": 2617,
+      "imports": [
+        "Mathlib.Data.Finset.Basic",
+        "Mathlib.Data.Finset.Image"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveMarkedCohen.lean",
+      "sha256": "25eabd06ed2bde46e1482a56477ffd54adb95fafd39132df9eb712a9ad77c359",
+      "bytes": 3417,
+      "imports": [
+        "JSP000930PositiveCohenConditions",
+        "JSP000933MarkedBaseEmbedding"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveFiniteTraceCardinality.lean",
+      "sha256": "ace3ae7a0e037c95b92a132a7e1d6ddccce6f6edbf18327d41156e0a9a4c6567",
+      "bytes": 2054,
+      "imports": [
+        "JSP000930PositiveMarkedCohen",
+        "Mathlib.SetTheory.Cardinal.Arithmetic"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveCohenBlockProjection.lean",
+      "sha256": "02429ac8573f7dc471129d6b97725e12555bd7426bb13e955c8e1c821852cb36",
+      "bytes": 2592,
+      "imports": [
+        "JSP000930PositiveMarkedCohen"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveMarkedCohenProjection.lean",
+      "sha256": "e3ab349437408cc1c6bbb4eb3903bd4b048e3f54c3a6b1397a8ead991cff6d15",
+      "bytes": 1414,
+      "imports": [
+        "JSP000930PositiveCohenBlockProjection"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveForcingProjectionPullback.lean",
+      "sha256": "07555bea5622c233a490ac9b5db8b4d0272cc809fd56b0ef45cd2be5f8f0870a",
+      "bytes": 2137,
+      "imports": [
+        "JSP000933BooleanCompletion"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveCompleteCohenProjection.lean",
+      "sha256": "c8fc6e2428b238972d57dca777748a3f8b594ac3de97b6faaecabd6c82d8ad71",
+      "bytes": 2257,
+      "imports": [
+        "JSP000930PositiveForcingProjectionPullback",
+        "Mathlib.Order.UpperLower.CompleteLattice"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveActualCompleteBlockInclusion.lean",
+      "sha256": "542d7579e16e01e0a06cb88c18aaba3735a1ed3050c3f4f999e3ff65f78e0ff3",
+      "bytes": 2624,
+      "imports": [
+        "JSP000930PositiveMarkedCohenProjection",
+        "JSP000930PositiveCompleteCohenProjection"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveActualCohenCoordinates.lean",
+      "sha256": "2f04e5e2d22d1f133a18de20c5e2bfbfbf899c61bc76c4e162d587922b9f10cd",
+      "bytes": 2889,
+      "imports": [
+        "JSP000930PositiveFiniteTraceCardinality",
+        "JSP000930PositiveActualCompleteBlockInclusion",
+        "JSP000933PreparedKappaBounds",
+        "JSP000933GroundKappaTraceEnum"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveSmallPrefixTraces.lean",
+      "sha256": "c74a62281d96f94c536e71a97a7f1f157129f182fe57c45b3d088897b21a62ce",
+      "bytes": 3258,
+      "imports": [
+        "JSP000930PositiveActualCohenCoordinates"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveMarkedCohenCCC.lean",
+      "sha256": "a83897ab27117dc18a26c637f15cde407d2b0161e42fd9b6aca558fcc69f3156",
+      "bytes": 4415,
+      "imports": [
+        "JSP000930PositiveMarkedCohen",
+        "JSP000933RelativeDeltaSystem",
+        "JSP000933RelativeCCCProjection",
+        "Mathlib.Data.Countable.Basic",
+        "Mathlib.Data.Fintype.Pi"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveBlockRelativeCCC.lean",
+      "sha256": "5542db90eecebc7953f54dce849efa4bb7b3ec02e183ab6c7d9c331fb979551b",
+      "bytes": 3511,
+      "imports": [
+        "JSP000930PositiveSmallPrefixTraces",
+        "JSP000930PositiveMarkedCohenCCC",
+        "JSP000933NativeMarkedSuccessor"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveMarkedBlockCompleteMap.lean",
+      "sha256": "477e5e6d8d72943aa78674f65b902a75f5c671cfb52c8b41137713247ccfc58b",
+      "bytes": 2731,
+      "imports": [
+        "JSP000930PositiveBlockRelativeCCC",
+        "JSP000933CompleteValueMap"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveSupportedRectangles.lean",
+      "sha256": "009535689ed317041c3ff8146773486fe4ef11ae3add923e54abbeb73fb83e10",
+      "bytes": 2929,
+      "imports": [
+        "JSP000930PositiveMarkedBlockCompleteMap",
+        "JSP000933RelativeTraceEnumeration"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveEveryRealLocalBulkPrefix.lean",
+      "sha256": "615b31d25ec840cf97944a402382b2b90a5ab8f73c1f41e43ef42e7213d4807f",
+      "bytes": 3049,
+      "imports": [
+        "JSP000930PositiveSupportedRectangles",
+        "JSP000933LocalKappaTraceSupport",
+        "JSP000933PreparedPrefixCHRealCodes",
+        "JSP000933BooleanRealEquality"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveCohenContinuumUpperCover.lean",
+      "sha256": "30fbbe3822f28858ce588fea9b96749247398527e10d487a450b152b02e80291",
+      "bytes": 3466,
+      "imports": [
+        "JSP000930PositiveEveryRealLocalBulkPrefix",
+        "JSP000933RelativeSmallQuotientCH",
+        "JSP000933PreparedSmallTraceEnum",
+        "JSP000930PositiveReserveKernels"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveReserveKernels.lean",
+      "sha256": "ea0c34693d86feb5119eae9e2ae78b862d8212312d527e47b85f95676774cd30",
+      "bytes": 2081,
+      "imports": [
+        "Mathlib.Order.CompleteBooleanAlgebra",
+        "Mathlib.Data.Set.Function"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveCohenBitCylinders.lean",
+      "sha256": "4721f8ae3a0076ea3525c26035eecd668dbac86eb922c93d4811ea2678321d0f",
+      "bytes": 3277,
+      "imports": [
+        "JSP000930PositiveMarkedCohen",
+        "JSP000930PositiveReserveKernels"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveDistinctCohenRealRows.lean",
+      "sha256": "8becef52d1e8bfd562cb0131c71d9a0a7afdad50ab9d6cc3e924ec3270c430c2",
+      "bytes": 3010,
+      "imports": [
+        "JSP000930PositiveCohenBitCylinders",
+        "JSP000933BooleanRealEquality",
+        "Mathlib.Data.Set.Finite.Basic"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveInternalCardinalOfReals.lean",
+      "sha256": "0cb249b1b127d847b64bf08792e5f0fbe126694c1ce0dd09a78a966d2f1fa1ab",
+      "bytes": 3518,
+      "imports": [
+        "JSP000930PositiveFirstNamedOccurrences",
+        "JSP000930PositiveCohenContinuumUpperCover",
+        "JSP000930PositiveDistinctCohenRealRows",
+        "JSP000933RealNameExtensionality",
+        "JSP000933PreparedOrdinalQuantifiers"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositivePreserveCheckedOmegaOne.lean",
+      "sha256": "d50830eaa957e240105e7e45135eae5fdcdb935081b02dbff9bccc1cbc8e8c9b",
+      "bytes": 4192,
+      "imports": [
+        "JSP000930PositiveInternalCardinalOfReals",
+        "JSP000933RelativeOmegaOnePreservation",
+        "JSP000933FiniteOrdinalLabels",
+        "JSP000933LocalKappaTraceSupport"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveMixedEnumerationInjection.lean",
+      "sha256": "50797f2ce2c29c67226094fd2db6a634f93d517779de4a88d63f2917641e2e4b",
+      "bytes": 3202,
+      "imports": [
+        "JSP000930PositivePreserveCheckedOmegaOne",
+        "JSP000933RelativeMixedEnumTransport",
+        "JSP000933MarkedTraceRectangles"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveInitialCardinalForwardMaps.lean",
+      "sha256": "65ef6774384eb7e4701249f0e8b41eeea644778ab1956f2319ff6f3b2d60d1fb",
+      "bytes": 3958,
+      "imports": [
+        "JSP000930PositiveMixedEnumerationInjection",
+        "JSP000933PreparedSmallTraceEnum"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveCheckedKappaPreservation.lean",
+      "sha256": "c3e7f79fe99fc2417453b3da95fd33aa83f83db99810156f60276f5481594c3e",
+      "bytes": 3242,
+      "imports": [
+        "JSP000933RelativeKappaAntichainBound",
+        "JSP000933RelativeChoiceNormalization"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveLocalPartialKappaRows.lean",
+      "sha256": "7ce9d76b15f29cc603c1cd562835347f7aac691f837833ec7d54847357d3e2b3",
+      "bytes": 2566,
+      "imports": [
+        "JSP000930PositiveCheckedKappaPreservation"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveNoInjectionCheckedSmall.lean",
+      "sha256": "c0985591af48ada28807a90cd6c9a73debccc3bc459667bd48307873c19869f0",
+      "bytes": 4036,
+      "imports": [
+        "JSP000930PositiveLocalPartialKappaRows",
+        "JSP000933PreparedOrdinalQuantifiers"
+      ]
+    },
+    {
+      "path": "src/JSP000930WetzelSentence.lean",
+      "sha256": "b1ce9d7a3702352b8072dde2c57d805ccb423dba8be1a9c98a39e22b4fbb972e",
+      "bytes": 2672,
+      "imports": [
+        "JSP000933SetSentence"
+      ]
+    },
+    {
+      "path": "src/JSP000930BooleanCardinalSyntax.lean",
+      "sha256": "15e03c6241cb33bab39e559c7389f56e58e5776570b7b756ffe209146ea15d48",
+      "bytes": 6828,
+      "imports": [
+        "JSP000930WetzelSentence",
+        "JSP000933BooleanSentenceLanguage"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveActualCohenContinuum.lean",
+      "sha256": "c236033353be4a3c96c1d593338bd7bb57af72219d3122c8cc07e7dc0d223306",
+      "bytes": 3243,
+      "imports": [
+        "JSP000930PositiveInitialCardinalForwardMaps",
+        "JSP000930PositiveNoInjectionCheckedSmall",
+        "JSP000930BooleanCardinalSyntax"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveGreedyRankLocalization.lean",
+      "sha256": "604efbef47fb9d04c29d4a406f74607d342362a6dd24233090c3fd3d20857456",
+      "bytes": 3622,
+      "imports": [
+        "JSP000930PositiveActualCohenContinuum",
+        "JSP000933RelativeGreedyCuts"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveEveryRealLocalReservePrefix.lean",
+      "sha256": "20e97a24947ff3921ab541ddf03b36d1cef3c29c52782c6d00b06635408e36c5",
+      "bytes": 4459,
+      "imports": [
+        "JSP000930PositiveGreedyRankLocalization",
+        "Mathlib.Data.Finset.Image"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveKappaSmallPartition.lean",
+      "sha256": "bc88e3a4ff51594e7948899fbaad13bfac2ebab4e9badc69b74192f07e91255f",
+      "bytes": 3157,
+      "imports": [
+        "JSP000930PositiveEveryRealLocalReservePrefix"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveOneReserveUnboundedFamily.lean",
+      "sha256": "9e5719d50e12cd69a3e57dd91e45593e5a4391dd3fb04972203fda310a3c9c63",
+      "bytes": 3088,
+      "imports": [
+        "JSP000930PositiveKappaSmallPartition"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveRationalDyadicCylinders.lean",
+      "sha256": "815e21763fa16655c5c14eb506080729e06ec4b28978763c252b2374dbcaf75b",
+      "bytes": 4254,
+      "imports": [
+        "Mathlib.Algebra.Order.Archimedean.Basic",
+        "Mathlib.Data.Rat.Cast.Order",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.NormNum"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveActualBinaryWordCylinders.lean",
+      "sha256": "4ce24a93f0b65974f6d4ce99816714dabcb5caf73044e7af1a079e720d1f05b6",
+      "bytes": 4368,
+      "imports": [
+        "JSP000930PositiveOneReserveUnboundedFamily",
+        "JSP000930PositiveRationalDyadicCylinders",
+        "Mathlib.Data.Finset.Lattice.Fold"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveAppendOutsidePrefix.lean",
+      "sha256": "6d1200e82bb2d8f7aa1a2f1abdb4ee851ab5ab52400117d51a485e5f243d98fa",
+      "bytes": 3311,
+      "imports": [
+        "JSP000930PositiveActualBinaryWordCylinders"
+      ]
+    },
+    {
+      "path": "src/JSP000930FreshCohenWordVector.lean",
+      "sha256": "d16414840ec9234799bb5f539e9f160effddec73dc1f147824102db2b23b4f86",
+      "bytes": 2964,
+      "imports": [
+        "JSP000930PositiveAppendOutsidePrefix"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveMixedFreshRowDensity.lean",
+      "sha256": "c5b8a367d6a96f4bc3c1b5d953d77a24a61ec779b4a02f658600f65a3be74ac4",
+      "bytes": 2782,
+      "imports": [
+        "JSP000930PositiveAppendOutsidePrefix",
+        "JSP000933FiniteBooleanWitnesses"
+      ]
+    },
+    {
+      "path": "src/JSP000930MixedCohenWordVectors.lean",
+      "sha256": "fe7e970868183443a1299d30e20e0463e144edeebeb7f2ecf61575d900f5745f",
+      "bytes": 4223,
+      "imports": [
+        "JSP000930FreshCohenWordVector",
+        "JSP000930PositiveMixedFreshRowDensity"
+      ]
+    },
+    {
+      "path": "src/JSP000930RationalDyadicBoxes.lean",
+      "sha256": "96bd8f2c3f58aa264f832fb5da40eadbaaceda941379d107bb5eefa557ce5691",
+      "bytes": 3743,
+      "imports": [
+        "JSP000930PositiveRationalDyadicCylinders",
+        "Mathlib.Topology.MetricSpace.Pseudo.Pi",
+        "Mathlib.Topology.Constructions",
+        "Mathlib.Topology.Order.Basic",
+        "Mathlib.Topology.Instances.Real.Lemmas"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveCompatibleWords.lean",
+      "sha256": "b31a8c341bcc778f59f318b229a8e355be79f67c00a8592cf51f77423d70a948",
+      "bytes": 1476,
+      "imports": [
+        "JSP000930PositiveMixedFreshRowDensity"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticWeightedRational.lean",
+      "sha256": "b82b213bb87a8e505ea0f0149964289adf8f02f489879474f0da0058ff2a03f9",
+      "bytes": 3472,
+      "imports": [
+        "JSP000933CheckedAddMulFactorial"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticRoundedLimit.lean",
+      "sha256": "7a20b100ffed0448bb16fbc1a5dd9b46fba8b1e528fe5a32c36360c0b784d056",
+      "bytes": 5050,
+      "imports": [
+        "JSP000930AnalyticWeightedRational",
+        "Mathlib"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveActualDyadicCutName.lean",
+      "sha256": "44ba5b471507a1ba0ef6abecaf66e8f2c74be2e8d262acfb5c12f6630ee1baaf",
+      "bytes": 3912,
+      "imports": [
+        "JSP000930PositiveCompatibleWords",
+        "JSP000930AnalyticRoundedLimit",
+        "JSP000933BooleanNamedCliqueStage",
+        "JSP000933MarkedNameTransport"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticArithmeticSyntax.lean",
+      "sha256": "b177827fe6293130bdf3e1be4e7cdfd26955060043c1c043b114c3c074ddafce",
+      "bytes": 3997,
+      "imports": [
+        "JSP000933SetSentence"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticOrderedCut.lean",
+      "sha256": "9768a1509cd3922f28ed3241900d6b9cb6230689bd7e78f19d657cc1fbae0924",
+      "bytes": 4157,
+      "imports": [
+        "JSP000930AnalyticArithmeticSyntax"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticSentence.lean",
+      "sha256": "6d65c994b23820bb1e1d81aad627104626fdbe61cbb61337bd74ab7765bcdafd",
+      "bytes": 9142,
+      "imports": [
+        "JSP000930AnalyticOrderedCut"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticRationalTruth.lean",
+      "sha256": "d87ae1471d24a9e6fcbf9ab14e5d2ee81993476039ca8f6388ef4f99c5b4aaf0",
+      "bytes": 4223,
+      "imports": [
+        "JSP000930AnalyticOrderedCut",
+        "JSP000930AnalyticWeightedRational"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticRationalBinders.lean",
+      "sha256": "99886f82f38080d58cc217ac6862e7a4f060b10b4d7495b55e9f901fdc5033f7",
+      "bytes": 6250,
+      "imports": [
+        "JSP000930AnalyticRationalTruth",
+        "JSP000933CheckedAddMulFactorial"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticNaturalPower.lean",
+      "sha256": "c5b69e7e0ded86165693a4cfe09e708e8cfe27621b0a4aa8b846f54d7813ef0e",
+      "bytes": 2303,
+      "imports": [
+        "JSP000930AnalyticSentence",
+        "JSP000933CheckedAddMulFactorial"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticNaturalExpr.lean",
+      "sha256": "8edd6ca40b6ecff18da20f312a7d957ca10f7888d2200a8cba59ca1af61939a8",
+      "bytes": 5052,
+      "imports": [
+        "JSP000930AnalyticRationalBinders",
+        "JSP000930AnalyticNaturalPower"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticArithmeticCompare.lean",
+      "sha256": "3f0c13220208786308fedfdc00eb7b6f8d5c62e270d3831b3f06bedf50a4d405",
+      "bytes": 2186,
+      "imports": [
+        "JSP000930AnalyticNaturalExpr"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticRationalOrder.lean",
+      "sha256": "c8ecd26f250d7a1effe61de43eed28fc566edadab6ea12199b42f5b9557577d7",
+      "bytes": 3839,
+      "imports": [
+        "JSP000930AnalyticArithmeticCompare",
+        "JSP000930AnalyticRoundedLimit"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticRationalQuantifiers.lean",
+      "sha256": "bd99b498d4d8392e6e9719da864664ec65c2c6adf16d703161cd59a4c618f2c5",
+      "bytes": 2977,
+      "imports": [
+        "JSP000930AnalyticRationalOrder"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticRealCutTruth.lean",
+      "sha256": "94617f6cfb9a2119262407ec44186b626e8b3e551a92b7ce259338f43b290e5a",
+      "bytes": 6013,
+      "imports": [
+        "JSP000930AnalyticRationalQuantifiers"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticCutCauchy.lean",
+      "sha256": "62bcfe5e4df52ec2a47165da01b1cc9b566dc4d8d52ca8459d5955da422da6c0",
+      "bytes": 9959,
+      "imports": [
+        "JSP000930AnalyticRoundedLimit"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticValidCutBridge.lean",
+      "sha256": "0bac68e8703261925393264763dc385b558d13473eed1c138e6a9f0282fe32ca",
+      "bytes": 3091,
+      "imports": [
+        "JSP000930AnalyticRealCutTruth",
+        "JSP000930AnalyticCutCauchy"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticComplexPair.lean",
+      "sha256": "986b8363ca51021255b8a66cc866602ec6d3427f47cb39e16271efea17ad7e09",
+      "bytes": 4360,
+      "imports": [
+        "JSP000930AnalyticSentence",
+        "JSP000930AnalyticValidCutBridge"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticCutCauchyMetric.lean",
+      "sha256": "db648718b77c48df6c50157bf3192eb32cbad77d1d9e8b51af5f668fafe3184a",
+      "bytes": 2489,
+      "imports": [
+        "JSP000930AnalyticCutCauchy"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticRealAxisName.lean",
+      "sha256": "10a7a561970229c456525836a40f0ec224a26de468f416cdf3a5118b60eaa675",
+      "bytes": 3799,
+      "imports": [
+        "JSP000930AnalyticComplexPair",
+        "JSP000930AnalyticCutCauchyMetric"
+      ]
+    },
+    {
+      "path": "src/JSP000930RationalIntervalCohenNames.lean",
+      "sha256": "a01275d43a526760228ae2a938b74c64a8f25084e66916565b043ef082186313",
+      "bytes": 4686,
+      "imports": [
+        "JSP000930PositiveActualDyadicCutName",
+        "JSP000930AnalyticRealAxisName"
+      ]
+    },
+    {
+      "path": "src/JSP000930MixedNamedBoxGenericity.lean",
+      "sha256": "5abad22beb1903c39f5dc94ce8c3479b2dbfac5dbf45cb1bb8e5acfb66447eda",
+      "bytes": 2832,
+      "imports": [
+        "JSP000930MixedCohenWordVectors",
+        "JSP000930RationalDyadicBoxes",
+        "JSP000930RationalIntervalCohenNames"
+      ]
+    },
+    {
+      "path": "src/JSP000930CohenMarkedWordReplacements.lean",
+      "sha256": "73c3891176968752526b5a9392cda78f781beddda53a75ed32a671a6d445a610",
+      "bytes": 1678,
+      "imports": [
+        "JSP000930MixedNamedBoxGenericity",
+        "JSP000933MarkedBaseEmbedding"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticRationalCross.lean",
+      "sha256": "c377477c7a30f6e98e3dcafc2670573e04752f98549898c3f2c3b823269edbab",
+      "bytes": 2395,
+      "imports": [
+        "JSP000930AnalyticRoundedLimit",
+        "Mathlib.Tactic.LinearCombination"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticRationalOps.lean",
+      "sha256": "e2af45aebc26f1f65a286f4c19f811fa2f89b21a5b1d2df30528a8d3d490d2a0",
+      "bytes": 5273,
+      "imports": [
+        "JSP000930AnalyticArithmeticCompare",
+        "JSP000930AnalyticRationalCross"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticCutAdd.lean",
+      "sha256": "dec3c022a2353ede20eed74437a1d61adda3719f45f95ac57e02bd420cdede96",
+      "bytes": 3527,
+      "imports": [
+        "JSP000930AnalyticRoundedLimit"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticRealAdd.lean",
+      "sha256": "c18ef87bfbb70f2254706e48cb93d08679fa973498971e05c35d4f8d3e85faf8",
+      "bytes": 5609,
+      "imports": [
+        "JSP000930AnalyticRationalOps",
+        "JSP000930AnalyticRealCutTruth",
+        "JSP000930AnalyticCutAdd"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticRealNeg.lean",
+      "sha256": "d9a75d4a3ff9c658af43c425e86596317522e7b096626ae216df2f278b27a5f5",
+      "bytes": 6387,
+      "imports": [
+        "JSP000930AnalyticRealAdd"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticRealNat.lean",
+      "sha256": "936733ada8c187214e35fe54b64df72075c9f38785ed00ee0a89bf4b9846f7ee",
+      "bytes": 5468,
+      "imports": [
+        "JSP000930AnalyticRealNeg",
+        "JSP000930AnalyticRealAxisName"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticRealCutClosure.lean",
+      "sha256": "dcbd8366cb19596bf39b39aeb37c094e61990622ba50e7b8b1ed8ca3f3e6140f",
+      "bytes": 2835,
+      "imports": [
+        "JSP000930AnalyticRealNat"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticCutMul.lean",
+      "sha256": "f58d2fc6b2cee25541f0e11770dbded375ebd22ed6b22b9137175c7350ef6243",
+      "bytes": 3745,
+      "imports": [
+        "JSP000930AnalyticCutAdd"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticRealMul.lean",
+      "sha256": "78d1f0e9fb4600eba071b384aaad104869db5544f95ac2ae72da632fe88ad3fa",
+      "bytes": 6896,
+      "imports": [
+        "JSP000930AnalyticRealAdd",
+        "JSP000930AnalyticCutMul"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticCutMulMetric.lean",
+      "sha256": "ca1cc98d557c5cd88e0eab776c82394dc07381e6c26260bb1234bbe5a569799b",
+      "bytes": 5456,
+      "imports": [
+        "JSP000930AnalyticCutMul",
+        "JSP000930AnalyticCutCauchyMetric"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticMulCutClosure.lean",
+      "sha256": "d82607ed3b6dffecf63c1f98aa306e3a5523c1c8838930d775895963a028fc13",
+      "bytes": 8637,
+      "imports": [
+        "JSP000930AnalyticRealCutClosure",
+        "JSP000930AnalyticRealMul",
+        "JSP000930AnalyticCutMulMetric"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticComplexBinders.lean",
+      "sha256": "e6b39c3f6589f34de68beb49278c00d709e0adb1a9b6fdce2afbc8eca6e47438",
+      "bytes": 5656,
+      "imports": [
+        "JSP000930AnalyticComplexPair",
+        "JSP000930AnalyticMulCutClosure"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticComplexBits.lean",
+      "sha256": "7e4e8c7672419e41d773054299cef31d14c3e9cb5f1190e08c8d7a32c8cffaeb",
+      "bytes": 2726,
+      "imports": [
+        "JSP000930AnalyticComplexBinders"
+      ]
+    },
+    {
+      "path": "src/JSP000930AbsoluteCutArithmetic.lean",
+      "sha256": "badf2becafdf14023ba1e75c9847058d8a422d97f13fe792933ecd94fb9700cd",
+      "bytes": 4509,
+      "imports": [
+        "JSP000930AnalyticComplexBits",
+        "JSP000933CompleteValueMap"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticComplexAdd.lean",
+      "sha256": "f2ed9810535f7096026eefc3dfbc8b196f7dae4fa170a87d6303d47b405ddfb8",
+      "bytes": 5397,
+      "imports": [
+        "JSP000930AnalyticComplexBits"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticRealSelectors.lean",
+      "sha256": "cc6c7198d74e0cbac45572b2999b9d49d978cf4174b799cd6f9ed8b318b3ae38",
+      "bytes": 2267,
+      "imports": [
+        "JSP000930AnalyticComplexAdd"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticComplexMul.lean",
+      "sha256": "162986b557ae95df2c72a880431108c0d25ae7dd5cac6c6faa0da0e07dee8aaa",
+      "bytes": 10790,
+      "imports": [
+        "JSP000930AnalyticRealSelectors",
+        "Mathlib.Tactic.IrreducibleDef"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticComplexBasic.lean",
+      "sha256": "7f81c7b7c102f389b7fa05c8a3fa71a9a77a14cb943d9d122a65a21f24399a36",
+      "bytes": 5393,
+      "imports": [
+        "JSP000930AnalyticComplexMul"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticFiniteComplexGraph.lean",
+      "sha256": "137ce30f504d116d61a01249d5a3e3b699456578defb80012f75e0f7d667b204",
+      "bytes": 6651,
+      "imports": [
+        "JSP000930AnalyticComplexBasic",
+        "JSP000933BooleanFunctionalGraphs"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticComplexRecursion.lean",
+      "sha256": "49ddccb5e3bb157e98d239aba176f6a782f018dc48496902b349e233cc61fcd3",
+      "bytes": 6319,
+      "imports": [
+        "JSP000930AnalyticFiniteComplexGraph"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticComplexPower.lean",
+      "sha256": "937321bd9f5dc055ff12a829a07229d3ec9eede2c151af9d84ae62e42459b50e",
+      "bytes": 3598,
+      "imports": [
+        "JSP000930AnalyticComplexRecursion"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticTaylorPrefix.lean",
+      "sha256": "f2c9d45c7c6b66688a5ca72efbb8b687f4500d6d5330578ed0aecba1dccf58f7",
+      "bytes": 4904,
+      "imports": [
+        "JSP000930AnalyticComplexPower"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticDecisionTrace.lean",
+      "sha256": "b5f0b96c1239d3a04bbf13dca5ac881d2373a9ee23e737a40385b508fee4de45",
+      "bytes": 6440,
+      "imports": [
+        "JSP000930AnalyticTaylorPrefix"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticDecisionTraceMul.lean",
+      "sha256": "336c5754bea8195763d29b9988abedb2b64ec2531a305e0a5ce8c68ba752ce7b",
+      "bytes": 2832,
+      "imports": [
+        "JSP000930AnalyticDecisionTrace"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticTaylor.lean",
+      "sha256": "41abb8f96cdea1596f201dd15eff05202a0b475711aaa82cdf489be7e067005c",
+      "bytes": 8793,
+      "imports": [
+        "Mathlib.Analysis.Complex.TaylorSeries",
+        "Mathlib.Analysis.Analytic.OfScalars",
+        "Mathlib.Analysis.Analytic.Uniqueness",
+        "Mathlib.Topology.Algebra.InfiniteSum.NatInt",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticComplexTrace.lean",
+      "sha256": "4f985a19d2deae720420589c5a0b724a963f85fb66c453ccbd8ef504420dfa1c",
+      "bytes": 4833,
+      "imports": [
+        "JSP000930AnalyticDecisionTraceMul",
+        "JSP000930AnalyticTaylor"
+      ]
+    },
+    {
+      "path": "src/JSP000930MixedPolynomialEvaluation.lean",
+      "sha256": "6081b571d5aefbd7c1541c917cabdaa284fc057e64ef56b6a5f8f2d298508324",
+      "bytes": 3495,
+      "imports": [
+        "JSP000930AbsoluteCutArithmetic",
+        "JSP000930AnalyticComplexTrace"
+      ]
+    },
+    {
+      "path": "src/JSP000930PolynomialTraceValues.lean",
+      "sha256": "9f08a91354c05db6834a0854e5a2a73bdb03bdb99fda7224529950dbd60e8786",
+      "bytes": 4338,
+      "imports": [
+        "JSP000930MixedPolynomialEvaluation"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveDyadicCutFirstOrder.lean",
+      "sha256": "d794d3b1049b34fa7ae78c4acfd75e39e8d1faed89ed3ed69c17699d06ce19bf",
+      "bytes": 1676,
+      "imports": [
+        "JSP000930PositiveActualDyadicCutName",
+        "JSP000930AnalyticValidCutBridge"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveRationalCertificateTransport.lean",
+      "sha256": "2032097b75e3186f9ef63bf48c28567318afffe29368952eeaf7a857adc66baa",
+      "bytes": 2138,
+      "imports": [
+        "JSP000930PositiveDyadicCutFirstOrder"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveActualReserveComplexPoint.lean",
+      "sha256": "537067ef5009fab797fadf046c52ec153abc9213af0bde826b6c07cfd86af5fe",
+      "bytes": 1666,
+      "imports": [
+        "JSP000930PositiveRationalCertificateTransport",
+        "JSP000930AnalyticRealAxisName"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveNoInjectionUnboundedKappaFamily.lean",
+      "sha256": "f38651328a0be934aed417752d981ae776fab40b7cf6e8a81dccf4e48fe2d440",
+      "bytes": 4357,
+      "imports": [
+        "JSP000930PositiveOneReserveUnboundedFamily",
+        "JSP000930PositiveNoInjectionCheckedSmall",
+        "JSP000933FiniteBooleanWitnesses"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveUnboundedEvaluationsContradiction.lean",
+      "sha256": "42ee342c4a9fc0a240743bfce55010cceaefcdaaa40bfbc439509c6e0fff3dad",
+      "bytes": 2784,
+      "imports": [
+        "JSP000930PositiveNoInjectionUnboundedKappaFamily"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveFirstFamilyIndicesUnbounded.lean",
+      "sha256": "d7d919a560c5b986f7c20ab41719d619083d4e4d0ef0b16d4edef7b36b1fd3b3",
+      "bytes": 4616,
+      "imports": [
+        "JSP000930PositiveUnboundedEvaluationsContradiction"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveActiveFamilyOneReserve.lean",
+      "sha256": "175f1f6b017fe03f35432b1ea522bc8111bc5630ffac63b96618b5ab65eb99e0",
+      "bytes": 1325,
+      "imports": [
+        "JSP000930PositiveFirstFamilyIndicesUnbounded"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveOrdinalGapCaps.lean",
+      "sha256": "610091a37ec2299955c00b9732078cc4e50ecef5910be48b6cc311d161e0aaa7",
+      "bytes": 3298,
+      "imports": [
+        "JSP000930PositiveActiveFamilyOneReserve"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveFamilyEvaluationKernel.lean",
+      "sha256": "fdab68b44bea9443392a3a5126143cedfe8a4cc298e0232dcdc9bd23c10dcec1",
+      "bytes": 6035,
+      "imports": [
+        "JSP000930PositiveActualReserveComplexPoint",
+        "JSP000930PositiveOrdinalGapCaps"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveTaylorBitCode.lean",
+      "sha256": "cfee672264d88ce41bc9f0f0c8710cf42b3a7455515c97d6d135e0eaf61ba77a",
+      "bytes": 4076,
+      "imports": [
+        "JSP000930PositiveFamilyEvaluationKernel",
+        "JSP000930AnalyticWeightedRational",
+        "Mathlib.Data.Countable.Basic"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveReconstructMixedTaylorGraph.lean",
+      "sha256": "629fe63d9589fe35111cee6e934abedc8c450450b3844ad34e8b7b766758c932",
+      "bytes": 5494,
+      "imports": [
+        "JSP000930PositiveTaylorBitCode"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveTypedComplexFunctionSemantics.lean",
+      "sha256": "44c991e0f913990db72792dbb6620b3f75a62a7738eb565911f793a7a25191db",
+      "bytes": 3715,
+      "imports": [
+        "JSP000930PositiveReconstructMixedTaylorGraph",
+        "JSP000930AnalyticComplexPair",
+        "JSP000930AnalyticRationalTruth"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveNativeTypedGraphLaws.lean",
+      "sha256": "ca2676284dfe8002b73104fa1e18282b5104f818bdc56b156fdf830447ac7c8d",
+      "bytes": 4237,
+      "imports": [
+        "JSP000930PositiveTypedComplexFunctionSemantics"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveEntireTaylorNameCover.lean",
+      "sha256": "adc08bb1f31ba157ea5b300a917aee241b93765cc7624a0f70200e13f25de990",
+      "bytes": 3095,
+      "imports": [
+        "JSP000930PositiveNativeTypedGraphLaws"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveSubmodelTaylorNameTransport.lean",
+      "sha256": "f6ae16a0ea6a842b885b13fd20c5535fd9ee85e6acd3576ecdd514a3b08b54e2",
+      "bytes": 3646,
+      "imports": [
+        "JSP000930PositiveEntireTaylorNameCover",
+        "JSP000933CompleteNameTransport"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveLocalFiniteCertificateCompactness.lean",
+      "sha256": "f9dc2a7a6c4ec0f5097dd0bb3f7a912d1e8e7d5f7e37c31dea660a87e4cbde80",
+      "bytes": 2758,
+      "imports": [
+        "JSP000930PositiveSubmodelTaylorNameTransport"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveLocalRationalCutEnclosures.lean",
+      "sha256": "739ab22608363691dc29f8679f0597d22f24af3b890a61637f576a7e66f9dee4",
+      "bytes": 4189,
+      "imports": [
+        "JSP000930PositiveLocalFiniteCertificateCompactness"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveMixedRationalGroundCompletion.lean",
+      "sha256": "ed1c5d4e0969ea250b9b6acc35867271845f3fc348f24bdccd1139afb78da183",
+      "bytes": 4353,
+      "imports": [
+        "JSP000930PositiveLocalRationalCutEnclosures",
+        "Mathlib.Data.Real.Basic"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveCommonFiniteCutApproximation.lean",
+      "sha256": "a7b6ce4e6abe1494a3593b1ed496131e45fccd155dc23058c2921c65a42faba2",
+      "bytes": 2570,
+      "imports": [
+        "JSP000930PositiveMixedRationalGroundCompletion"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveStrictRationalCoefficientGap.lean",
+      "sha256": "8f46f00713bd3d8330271c54cb388418384f7cd32ccf9609aafccc915dd541b9",
+      "bytes": 2688,
+      "imports": [
+        "JSP000930PositiveCommonFiniteCutApproximation"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveActualNamedTaylorGap.lean",
+      "sha256": "376255874742f9f66ecc3a70e2a80d6fd78a50a8aa4d407951c6e61d8c25e16c",
+      "bytes": 2893,
+      "imports": [
+        "JSP000930PositiveStrictRationalCoefficientGap",
+        "JSP000930PositiveTaylorBitCode"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveWeightedComplexImpliesProperCuts.lean",
+      "sha256": "b317e051a5c8b1f0561d44fd05d3f058a1be4f3c1dbf1da92c58158add9597fb",
+      "bytes": 3392,
+      "imports": [
+        "JSP000930PositiveActualNamedTaylorGap",
+        "JSP000930AnalyticComplexPair"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveRationalCompletionDecisionTrace.lean",
+      "sha256": "350ac8b138664a58dd100432a61be8a300e6856bdc14cfe2d95fd3c5a7b73bee",
+      "bytes": 2230,
+      "imports": [
+        "JSP000930PositiveWeightedComplexImpliesProperCuts"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticDecisionCompletion.lean",
+      "sha256": "63b770738b6681896daa79a804be16542a82aa60de4f7aec06d6f9782d443a07",
+      "bytes": 3227,
+      "imports": [
+        "JSP000930AnalyticComplexTrace",
+        "JSP000930PositiveRationalCompletionDecisionTrace"
+      ]
+    },
+    {
+      "path": "src/JSP000930NamedComplexMetricLaw.lean",
+      "sha256": "28ce4df6c305911581143545c5b448c4d841816eb64d874c10cbdec923f6b393",
+      "bytes": 5166,
+      "imports": [
+        "JSP000930PolynomialTraceValues",
+        "JSP000930AnalyticDecisionCompletion",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "path": "src/JSP000930PolynomialTraceValidity.lean",
+      "sha256": "c595039c1d4247214742f40ef0f11d396e28b3c0589c9b9781150f21fcf53177",
+      "bytes": 3348,
+      "imports": [
+        "JSP000930NamedComplexMetricLaw"
+      ]
+    },
+    {
+      "path": "src/JSP000930PolynomialRefinementLaws.lean",
+      "sha256": "1528aba87b46d262861e7f82e07d10d24a183d8d31491ee696777d7d93fd84ba",
+      "bytes": 4290,
+      "imports": [
+        "JSP000930PolynomialTraceValidity"
+      ]
+    },
+    {
+      "path": "src/JSP000930MarkedPolynomialForcing.lean",
+      "sha256": "26c28b51798c9cc0d52f155137c705bf939c985619c162977845807978866b94",
+      "bytes": 3825,
+      "imports": [
+        "JSP000930PolynomialRefinementLaws",
+        "JSP000933MarkedTotalForcing"
+      ]
+    },
+    {
+      "path": "src/JSP000930PolynomialRadiusBudgetDensity.lean",
+      "sha256": "1575f4e200a22f81a311822329c92aa05cb2e3215d20cc635eb10e88d8260aef",
+      "bytes": 3642,
+      "imports": [
+        "JSP000930MarkedPolynomialForcing"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveReciprocalCut.lean",
+      "sha256": "7ae3a7aa3a4ad58118aff31f24a76666d22e8132deed0659a3b36af53a7c2869",
+      "bytes": 4598,
+      "imports": [
+        "JSP000930PolynomialRadiusBudgetDensity"
+      ]
+    },
+    {
+      "path": "src/JSP000930ReciprocalCutTrace.lean",
+      "sha256": "0b45039e7d45f3a374a5b9a0e8c67a8db50d5a36fd3f0b615bb5e4774222d152",
+      "bytes": 2975,
+      "imports": [
+        "JSP000930PositiveReciprocalCut"
+      ]
+    },
+    {
+      "path": "src/JSP000930StableComplexDisequality.lean",
+      "sha256": "7f44654a162c26f1bb051859a7620839ac31eb421d7f9f49902e3bf3d81e7162",
+      "bytes": 2945,
+      "imports": [
+        "JSP000930ReciprocalCutTrace"
+      ]
+    },
+    {
+      "path": "src/JSP000930NamedPositiveSquaredNorm.lean",
+      "sha256": "da32206461540b3d25ddf30da1431e4fe50ecad4f6e99cea9444bbda0ef0b8a6",
+      "bytes": 1972,
+      "imports": [
+        "JSP000930StableComplexDisequality"
+      ]
+    },
+    {
+      "path": "src/JSP000930NamedComplexInverse.lean",
+      "sha256": "7b82f500e7c6768e883b6a2dfff208313f227b96eaa1afef0500cc84b2fe1632",
+      "bytes": 3402,
+      "imports": [
+        "JSP000930NamedPositiveSquaredNorm",
+        "JSP000933FiniteBooleanWitnesses"
+      ]
+    },
+    {
+      "path": "src/JSP000930MixedFiniteExpressions.lean",
+      "sha256": "d377b61f7e2684d74f260fed91600a296556fca49e765319e0fa738a39ea0937",
+      "bytes": 3213,
+      "imports": [
+        "JSP000930NamedComplexInverse"
+      ]
+    },
+    {
+      "path": "src/JSP000930FixedReciprocalMargins.lean",
+      "sha256": "6e543ba329d167df29f658f7ea09f569ae6bf5baeae20f37788f0ad21ce39479",
+      "bytes": 3377,
+      "imports": [
+        "JSP000930MixedFiniteExpressions"
+      ]
+    },
+    {
+      "path": "src/JSP000930FiniteExpressionSoundness.lean",
+      "sha256": "5fe3055c67c72be468b9e9b84331ad4c3f3d1d7efdf178ba43814fbf6974f116",
+      "bytes": 3813,
+      "imports": [
+        "JSP000930FixedReciprocalMargins"
+      ]
+    },
+    {
+      "path": "src/JSP000930FiniteExpressionPolynomials.lean",
+      "sha256": "832bbe20d6c576cd579a37aa464b4d1e4483dafdaadd81eac44871ccd08cab40",
+      "bytes": 4581,
+      "imports": [
+        "JSP000930FiniteExpressionSoundness"
+      ]
+    },
+    {
+      "path": "src/JSP000930ExpressionCoefficientSafety.lean",
+      "sha256": "4a8e33cf2c3c638ce643a2c3e4e57f09d52b548943cbce8f77adb538986b4430",
+      "bytes": 4477,
+      "imports": [
+        "JSP000930FiniteExpressionPolynomials"
+      ]
+    },
+    {
+      "path": "src/JSP000930NamedVanishingNonzero.lean",
+      "sha256": "0ac8f78e31836f789cc906136d441834c904abecb882ab7df2e1be1ceb8bcf2a",
+      "bytes": 4674,
+      "imports": [
+        "JSP000930ExpressionCoefficientSafety"
+      ]
+    },
+    {
+      "path": "src/JSP000930NamedFinitePinValues.lean",
+      "sha256": "a8f2bbe92498fa528079426a59fb5c50b51b84e406b065561d259eb6da2687e6",
+      "bytes": 4795,
+      "imports": [
+        "JSP000930NamedVanishingNonzero"
+      ]
+    },
+    {
+      "path": "src/JSP000930FiniteMetricLawContext.lean",
+      "sha256": "66264d07452564c72ceab859138b1a71c70a390887767230a185995c47bd53c1",
+      "bytes": 2032,
+      "imports": [
+        "JSP000930NamedFinitePinValues"
+      ]
+    },
+    {
+      "path": "src/JSP000930NamedDisplacementDiscControl.lean",
+      "sha256": "3f1dcc4c8448d5b8775781a373e2792e7439caf51eb6af60a4ea315d6905c5c2",
+      "bytes": 6485,
+      "imports": [
+        "JSP000930FiniteMetricLawContext"
+      ]
+    },
+    {
+      "path": "src/JSP000930MixedRectangleDistance.lean",
+      "sha256": "8090837e4e90bc340ae70e6cc04b77b7cbddf954b28c86f55339ea2428488364",
+      "bytes": 4025,
+      "imports": [
+        "JSP000930NamedDisplacementDiscControl",
+        "JSP000930MixedNamedBoxGenericity",
+        "JSP000930PositiveLocalRationalCutEnclosures"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualDenseCohenPalettes.lean",
+      "sha256": "04bcb2b5019c18a6f8a61b9907736a6c428080d793b97e01b9dd0c86d81f85b7",
+      "bytes": 4851,
+      "imports": [
+        "JSP000930MixedRectangleDistance"
+      ]
+    },
+    {
+      "path": "src/JSP000930FiniteNormBounds.lean",
+      "sha256": "66f1f93bda3d16b95914a59b9800239218671fcced1a1e865911b06abb52ee69",
+      "bytes": 4926,
+      "imports": [
+        "JSP000930ActualDenseCohenPalettes"
+      ]
+    },
+    {
+      "path": "src/JSP000930FiniteExpressionSupport.lean",
+      "sha256": "16fdd90a5310be585f359d7b66f2d67c6ea46fcab609b7512eca9ba11ae3eb89",
+      "bytes": 2667,
+      "imports": [
+        "JSP000930FiniteNormBounds"
+      ]
+    },
+    {
+      "path": "src/JSP000930TraceExpressionEnvironment.lean",
+      "sha256": "24c44bd11d03d6b3ee2ad1c9d23c6a3aaed7e683bc216f35bf1739ea7b336543",
+      "bytes": 3117,
+      "imports": [
+        "JSP000930FiniteExpressionSupport"
+      ]
+    },
+    {
+      "path": "src/JSP000930MarkedOnePinRefinement.lean",
+      "sha256": "34b12fa1260be5243c6e4ba8dab013483e97217887132271e8b5abf70660f70d",
+      "bytes": 5719,
+      "imports": [
+        "JSP000930TraceExpressionEnvironment"
+      ]
+    },
+    {
+      "path": "src/JSP000930LocalNamedPinDensity.lean",
+      "sha256": "232c1c7dd4cdecf4bc1831f86881c47b236e20daf54074558f819f18a241f79b",
+      "bytes": 4279,
+      "imports": [
+        "JSP000930MarkedOnePinRefinement"
+      ]
+    },
+    {
+      "path": "src/JSP000930GenericPins.lean",
+      "sha256": "0cdc568b649895256194fe298aad1d41282ed85b5efca34d97d2e505a55e8ad1",
+      "bytes": 2943,
+      "imports": [
+        "JSP000930LocalNamedPinDensity",
+        "JSP000933MarkedTraceRectangles"
+      ]
+    },
+    {
+      "path": "src/JSP000930GenericFineTraceCovers.lean",
+      "sha256": "ce6354510e696f0d8eeaf93181478f6e2dce7c3b5571cee3452eb62fa7be2ead",
+      "bytes": 5827,
+      "imports": [
+        "JSP000930GenericPins",
+        "JSP000933MarkedCompatiblePairs"
+      ]
+    },
+    {
+      "path": "src/JSP000930SymbolicPolynomialTrace.lean",
+      "sha256": "34e2757e0a4a0330ea996447b240a5470622f3c39d2c6e09561a2b8fe1abf5a7",
+      "bytes": 3325,
+      "imports": [
+        "JSP000930GenericFineTraceCovers"
+      ]
+    },
+    {
+      "path": "src/JSP000930SymbolicTraceCardinality.lean",
+      "sha256": "b0e67c09fd46123c1981502a27679c8894f2006e750282416efc07216a9205fa",
+      "bytes": 1952,
+      "imports": [
+        "JSP000930SymbolicPolynomialTrace",
+        "Mathlib.SetTheory.Cardinal.Arithmetic"
+      ]
+    },
+    {
+      "path": "src/JSP000930SymbolicLagrangeGround.lean",
+      "sha256": "42e88a58091659d536af21984726c288b2d4f5bb5591536593d62ea0c8e9e7f6",
+      "bytes": 5590,
+      "imports": [
+        "JSP000930SymbolicTraceCardinality"
+      ]
+    },
+    {
+      "path": "src/JSP000930SymbolicNamedPinValidity.lean",
+      "sha256": "20d0280e31d8de28541274bc13b56630f08b7568a1230de72d0a848daad156ba",
+      "bytes": 5367,
+      "imports": [
+        "JSP000930SymbolicLagrangeGround"
+      ]
+    },
+    {
+      "path": "src/JSP000930SymbolicPinLogSelection.lean",
+      "sha256": "819501fb5fc9de41e0065134890f9a236d315d8b8bf111cc46e832b4f2c7bd6c",
+      "bytes": 1966,
+      "imports": [
+        "JSP000930SymbolicNamedPinValidity"
+      ]
+    },
+    {
+      "path": "src/JSP000930GaussianRationalSeed.lean",
+      "sha256": "a9d80d549bcccc06bdc266d63e22603f96f427ef8ed2ea8e2efdd833fa48e488",
+      "bytes": 3536,
+      "imports": [
+        "JSP000930SymbolicPinLogSelection",
+        "Mathlib.Data.List.Forall2",
+        "JSP000930MixedRectangleDistance"
+      ]
+    },
+    {
+      "path": "src/JSP000930CohenStrictInterior.lean",
+      "sha256": "44c39cebbfc1db605c1e94052f188bda6ffd3bab0214c6670b56f16bee2838f1",
+      "bytes": 5737,
+      "imports": [
+        "JSP000930CohenMarkedWordReplacements",
+        "JSP000930GaussianRationalSeed",
+        "JSP000930MixedRectangleDistance"
+      ]
+    },
+    {
+      "path": "src/JSP000930NamedHornerApproximationStep.lean",
+      "sha256": "c4c4c4b1f788f7858e2114fccec5d87ce0e72d43a216daa10a5f6ff0dbf35e29",
+      "bytes": 2389,
+      "imports": [
+        "JSP000930GaussianRationalSeed"
+      ]
+    },
+    {
+      "path": "src/JSP000930SeedHornerBound.lean",
+      "sha256": "e06744aacea71264b4219814c4f2fbed3dd5d28c532bdbb5bca0489ff73d7325",
+      "bytes": 2903,
+      "imports": [
+        "JSP000930NamedHornerApproximationStep"
+      ]
+    },
+    {
+      "path": "src/JSP000930ExpressionContextRename.lean",
+      "sha256": "93283fd0cac00672964d5dd839ddcf849bc738bbc4927ad571ddd44e850d1060",
+      "bytes": 2503,
+      "imports": [
+        "JSP000930SymbolicNamedPinValidity",
+        "JSP000930SeedHornerBound"
+      ]
+    },
+    {
+      "path": "src/JSP000930SymbolicDisplacementGround.lean",
+      "sha256": "ee73546d7883a832498ad23cacd811991cfc76bc7401498cd65f5cc439cef1c6",
+      "bytes": 4728,
+      "imports": [
+        "JSP000930ExpressionContextRename",
+        "JSP000930NamedDisplacementDiscControl"
+      ]
+    },
+    {
+      "path": "src/JSP000930SymbolicDenominatorMargin.lean",
+      "sha256": "602383d7f8ab0b96440a657d84b457dddec62fadd6a2fb0e4fda8c232a2d10a1",
+      "bytes": 3044,
+      "imports": [
+        "JSP000930SymbolicDisplacementGround"
+      ]
+    },
+    {
+      "path": "src/JSP000930SymbolicNamedGridDisplacement.lean",
+      "sha256": "a587b909121e289cb70d078892a219ad93ea7e2bdac237a516197d5e9e8fcc4d",
+      "bytes": 5135,
+      "imports": [
+        "JSP000930SymbolicDenominatorMargin"
+      ]
+    },
+    {
+      "path": "src/JSP000930NamedDistanceCongruence.lean",
+      "sha256": "7295a7102e782e095c36455481f8c0d48b0b50ffd6acf30c0ff9d9bc7b5d290d",
+      "bytes": 1042,
+      "imports": [
+        "JSP000930FiniteNormBounds"
+      ]
+    },
+    {
+      "path": "src/JSP000930SymbolicPrecision.lean",
+      "sha256": "5fd3e24fed5bddb239940956d2c79b6238bd620a28af17cc426bc797fb998a0a",
+      "bytes": 1538,
+      "imports": [
+        "JSP000930SymbolicNamedGridDisplacement",
+        "JSP000930NamedDistanceCongruence"
+      ]
+    },
+    {
+      "path": "src/JSP000930SymbolicTraceDensity.lean",
+      "sha256": "c58992a4f34f62dbf34e98509130ee17f889333ae955dbe4a7fbb6342380c49b",
+      "bytes": 8857,
+      "imports": [
+        "JSP000930SymbolicPrecision"
+      ]
+    },
+    {
+      "path": "src/JSP000930SymbolicForcingDenseEquivalence.lean",
+      "sha256": "fb0e7eda6691e80d8adf5bea4c77c1a045cbbd79a7bbacc796b7f28cbe7c3215",
+      "bytes": 4766,
+      "imports": [
+        "JSP000930SymbolicTraceDensity",
+        "JSP000933DenseForcingMap",
+        "JSP000933MarkedNameTransport"
+      ]
+    },
+    {
+      "path": "src/JSP000930SymbolicFiniteSupport.lean",
+      "sha256": "ab95b738d5d140b776ebc9f8b15e5c8c14e097e6d3abdc4dad0e174ed68d7325",
+      "bytes": 2605,
+      "imports": [
+        "JSP000930SymbolicForcingDenseEquivalence"
+      ]
+    },
+    {
+      "path": "src/JSP000930SymbolicSupportedForcing.lean",
+      "sha256": "391a692dab012cfdf48f5610bac051eb5d9b35057a7089ac76d2b3f93c546e6f",
+      "bytes": 5585,
+      "imports": [
+        "JSP000930SymbolicFiniteSupport"
+      ]
+    },
+    {
+      "path": "src/JSP000930SymbolicTrimCommonRefinement.lean",
+      "sha256": "1b3ad55debb37fbf53b5b0836720accd1209d23cae5736f33d93363cd30acbb9",
+      "bytes": 3318,
+      "imports": [
+        "JSP000930SymbolicSupportedForcing"
+      ]
+    },
+    {
+      "path": "src/JSP000930SymbolicOldSupportCompatibility.lean",
+      "sha256": "b504f38cb1c444ac1f8988a8ee2df49f536ac9339a00855d1ea21ee89664b551",
+      "bytes": 3109,
+      "imports": [
+        "JSP000930SymbolicTrimCommonRefinement"
+      ]
+    },
+    {
+      "path": "src/JSP000930SymbolicOldSupportValues.lean",
+      "sha256": "23ed8f8d37aa3d3ece874cb30f1d209e1f1040f42019f2f0ff1356acb50a6abf",
+      "bytes": 3912,
+      "imports": [
+        "JSP000930SymbolicOldSupportCompatibility"
+      ]
+    },
+    {
+      "path": "src/JSP000930SymbolicMarkedPrefixMap.lean",
+      "sha256": "af4db37448da90bd1be67affbb5431a8cf70b6f508ceb03b5f56be8c49baa4d5",
+      "bytes": 3029,
+      "imports": [
+        "JSP000930SymbolicOldSupportValues"
+      ]
+    },
+    {
+      "path": "src/JSP000930RegularOpenPredensity.lean",
+      "sha256": "a817ba1752e1756cadf12e7a3495784a25b60bc0eb3a7951f8a84d213bba0bc6",
+      "bytes": 3659,
+      "imports": [
+        "JSP000930SymbolicMarkedPrefixMap"
+      ]
+    },
+    {
+      "path": "src/JSP000930RegularOpenPredensityJoins.lean",
+      "sha256": "84602cda14c6611966039ae752956bbe3a201ba982b34d96aede5d3f6b12a3b8",
+      "bytes": 3271,
+      "imports": [
+        "JSP000930RegularOpenPredensity"
+      ]
+    },
+    {
+      "path": "src/JSP000930RegularOpenCompleteMap.lean",
+      "sha256": "0107ec3dd605c539351ac3f33b4f7c473033733c9308eb0fac95e3d5ce75a222",
+      "bytes": 3588,
+      "imports": [
+        "JSP000930RegularOpenPredensityJoins"
+      ]
+    },
+    {
+      "path": "src/JSP000930RegularOpenBasicCoherence.lean",
+      "sha256": "5c2e8cc00e43d97bb295b52230888740779a2de9225495efd6f4e83c722de478",
+      "bytes": 2145,
+      "imports": [
+        "JSP000930RegularOpenCompleteMap"
+      ]
+    },
+    {
+      "path": "src/JSP000930SymbolicPrefixCompleteMap.lean",
+      "sha256": "80e86dfec73900d0494d2cd5f5cc10f82afdd3000b9171a36681333081e169b4",
+      "bytes": 3074,
+      "imports": [
+        "JSP000930RegularOpenBasicCoherence"
+      ]
+    },
+    {
+      "path": "src/JSP000930SymbolicOneValueGround.lean",
+      "sha256": "1f6cf5d9dacd20b71a6262b397492356696702ad0c6f07d5312c36257a8b1f11",
+      "bytes": 5205,
+      "imports": [
+        "JSP000930SymbolicDisplacementGround"
+      ]
+    },
+    {
+      "path": "src/JSP000930SymbolicOneValueGridShift.lean",
+      "sha256": "575b45a534f823a3c3babe19d0909cb893f16bdb06968b2d423184910ef3885a",
+      "bytes": 5814,
+      "imports": [
+        "JSP000930SymbolicOneValueGround",
+        "JSP000930SymbolicDenominatorMargin"
+      ]
+    },
+    {
+      "path": "src/JSP000930OldCenteredSymbolicTrace.lean",
+      "sha256": "be0f880445621d60b90083810c7a092ec53ff5aabd5ad08bbd317eef9c968c38",
+      "bytes": 3812,
+      "imports": [
+        "JSP000930CohenStrictInterior",
+        "JSP000930SymbolicPrefixCompleteMap",
+        "JSP000930SymbolicOneValueGridShift"
+      ]
+    },
+    {
+      "path": "src/JSP000930OldCenteredTraceTransport.lean",
+      "sha256": "1fc88c64d895581b1d32b47217369fe16d4a84d9c0593a77ed76c7314e00d7e3",
+      "bytes": 1738,
+      "imports": [
+        "JSP000930OldCenteredSymbolicTrace"
+      ]
+    },
+    {
+      "path": "src/JSP000930OldCenteredTraceComparison.lean",
+      "sha256": "7b5123c010aaa6970a2449726f30af308edd1a32c79d0bb2aecaa0fce31e9a79",
+      "bytes": 4484,
+      "imports": [
+        "JSP000930OldCenteredTraceTransport"
+      ]
+    },
+    {
+      "path": "src/JSP000930CohenRetargetEarlierValue.lean",
+      "sha256": "4e1e4a7febefb3465f94a5b79c14e713fe6e67fa10dcdd81ddd79554dc396518",
+      "bytes": 4426,
+      "imports": [
+        "JSP000930OldCenteredTraceComparison",
+        "JSP000933MarkedNameTransport"
+      ]
+    },
+    {
+      "path": "src/JSP000930OldDenseSetActualCenter.lean",
+      "sha256": "8e98e7d66bccd8739f9990ede85c6859666c7693801d7957c180c8bc30403926",
+      "bytes": 2045,
+      "imports": [
+        "JSP000930CohenRetargetEarlierValue"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticTraceMetric.lean",
+      "sha256": "671df53d877ebeeff604f2861a81ded88d4f8b8d3aa8d85181cadfe0159d59b0",
+      "bytes": 3211,
+      "imports": [
+        "JSP000930AnalyticDecisionCompletion"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticTaylorTail.lean",
+      "sha256": "15e8fc9465f82d3a49d4109d8b4d2b70964b6fb4a9a11fabbab6f0b1b2adf571",
+      "bytes": 5099,
+      "imports": [
+        "JSP000930AnalyticTaylor",
+        "Mathlib.Analysis.Normed.Group.InfiniteSum",
+        "Mathlib.Analysis.SpecificLimits.Normed"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticRadiusTrace.lean",
+      "sha256": "019045ed50e06a195840606d5c9f27a18291dacfdc8c4549af0cc09319f44599",
+      "bytes": 4157,
+      "imports": [
+        "JSP000930AnalyticTraceMetric",
+        "JSP000930AnalyticTaylorTail"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticPrefixCauchy.lean",
+      "sha256": "46cfaed7351cffe254800145b3a53bc51c0707d9d81fa8b6f6c443904bf442c1",
+      "bytes": 5219,
+      "imports": [
+        "JSP000930AnalyticRadiusTrace"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticTaylorLimit.lean",
+      "sha256": "81e5652f8b341ea98b67f5d96be6fddd174185f94a9d10ce8f8fc0a126d37f5c",
+      "bytes": 5482,
+      "imports": [
+        "JSP000930AnalyticPrefixCauchy"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticBudgetSelectors.lean",
+      "sha256": "f5d89bde8895f1a07a19ae618c4eaad58abe50ddd238eb6e36fabc6553b15363",
+      "bytes": 6056,
+      "imports": [
+        "JSP000930AnalyticTaylorLimit"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticRadiusCoefficient.lean",
+      "sha256": "a1ea65a6e1c98ac51a9aeff2fa057a6076f02e230a6ef0e72c20c4bb8be54e76",
+      "bytes": 6182,
+      "imports": [
+        "JSP000930AnalyticBudgetSelectors"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveLiteralSequenceGivesProperCoefficients.lean",
+      "sha256": "210d9db4275ac93fdad1960b79e0841f2d789f5e1c9e7a677848a416b2a95076",
+      "bytes": 3253,
+      "imports": [
+        "JSP000930PositiveWeightedComplexImpliesProperCuts",
+        "JSP000930PositiveEntireTaylorNameCover"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticRadiusBudget.lean",
+      "sha256": "dbea51c93a953682bcb86a7dc43887a201701bf8fbaa0f2a9b76a15659564e12",
+      "bytes": 3858,
+      "imports": [
+        "JSP000930AnalyticRadiusCoefficient",
+        "JSP000930PositiveLiteralSequenceGivesProperCoefficients"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticEntireGrowth.lean",
+      "sha256": "505e0390ecad73d3f56fa9a3bb4fff6e78a3ce41b4f7a71639149f58868a1a97",
+      "bytes": 4488,
+      "imports": [
+        "JSP000930AnalyticRadiusBudget"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticComplexWitness.lean",
+      "sha256": "95b4a5dd5125ee10a8e8b077b485ecdd1d657b2e4942f3ab16212dc1d77aa814",
+      "bytes": 3242,
+      "imports": [
+        "JSP000930AnalyticEntireGrowth"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticTypedGraphWitness.lean",
+      "sha256": "d1d5f11093b423fa7850f1b82f5b1441ea3939336716acac68aee7622ae8bed0",
+      "bytes": 2447,
+      "imports": [
+        "JSP000930AnalyticComplexWitness"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticRecursionUnique.lean",
+      "sha256": "4e9026702cdcdc41706bb301a5bfccbc964c17852244543526738f819ed97f63",
+      "bytes": 7615,
+      "imports": [
+        "JSP000930AnalyticTypedGraphWitness"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticPowerUnique.lean",
+      "sha256": "bbab67981c45ddac60de657f04c141c59f69ecd19d6f77f6db54efb853447df7",
+      "bytes": 5027,
+      "imports": [
+        "JSP000930AnalyticRecursionUnique"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticTaylorPrefixUnique.lean",
+      "sha256": "bdb4be9fc07c2428fe1c6a042398b005dc461c607456fb0f3cb54f516cd8c351",
+      "bytes": 10845,
+      "imports": [
+        "JSP000930AnalyticPowerUnique"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticEvaluationMetric.lean",
+      "sha256": "0d353934d9a15131d12fe7a2a260437447c794474c271a333498e0f246086396",
+      "bytes": 8573,
+      "imports": [
+        "JSP000930AnalyticTaylorPrefixUnique"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticComplexTermMask.lean",
+      "sha256": "63f50989fab0b08647882bdba3503c98f5e9c889a30700133f4bfe258a7015c7",
+      "bytes": 4833,
+      "imports": [
+        "JSP000930AnalyticComplexWitness"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticComplexSelectors.lean",
+      "sha256": "df666630c6ffe0d767e55084f4c807da609301a0bf65a194ea09529d4bcf8c9a",
+      "bytes": 7500,
+      "imports": [
+        "JSP000930AnalyticEvaluationMetric",
+        "JSP000930AnalyticRadiusCoefficient",
+        "JSP000930AnalyticComplexTermMask"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticEvaluationBudget.lean",
+      "sha256": "8a4a27ceb25c36874c84d103253072e835bb8617b0ff928c1803b19c185342ae",
+      "bytes": 4888,
+      "imports": [
+        "JSP000930AnalyticComplexSelectors"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticEvaluationTail.lean",
+      "sha256": "095765c2f2bd0e8a58b02079c1ac12435c26e7ce847b1527ac099ee4178210a1",
+      "bytes": 6402,
+      "imports": [
+        "JSP000930AnalyticEvaluationBudget"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticNativeEvaluation.lean",
+      "sha256": "2d191902c54d2b672f4aaee16c91c9d0af984c9c65c95739ff83ab60cf2bd378",
+      "bytes": 5139,
+      "imports": [
+        "JSP000930AnalyticEvaluationTail"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveDistinctMixedTaylorGroundCompletion.lean",
+      "sha256": "b3990e619da0dee5103206685f194e6a130f9c63c568ee74f94746a9abdda540",
+      "bytes": 2978,
+      "imports": [
+        "JSP000930PositiveRationalCompletionDecisionTrace"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveExplicitCutValidityNaturality.lean",
+      "sha256": "0787bed0a28dccbbb0d54da4affc562e69ea917257b99a928393fd4805aa802c",
+      "bytes": 2521,
+      "imports": [
+        "JSP000930PositiveDistinctMixedTaylorGroundCompletion",
+        "JSP000930PositiveSubmodelTaylorNameTransport"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveNativeGrowthNaturality.lean",
+      "sha256": "5c7fdca084bfdc1523fb9bedb1dd0c6d7bba4e5f44cd69a76a9a525aed3d0f1b",
+      "bytes": 2766,
+      "imports": [
+        "JSP000930PositiveExplicitCutValidityNaturality",
+        "JSP000930AnalyticRadiusTrace"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveMaskedProperCutTransfer.lean",
+      "sha256": "80834839e39b5fbf0493126267bc997928ed0da3eb0da6593819c699c26b5b9d",
+      "bytes": 1938,
+      "imports": [
+        "JSP000930PositiveExplicitCutValidityNaturality"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveNativeGrowthMaskedCongruence.lean",
+      "sha256": "9c3efcab5ba0aa18eff064f6f5332d41f54e29ae16897ea4f40b30917a123bb6",
+      "bytes": 4570,
+      "imports": [
+        "JSP000930PositiveNativeGrowthNaturality",
+        "JSP000930PositiveMaskedProperCutTransfer"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveReflectNativeDistinctValidTaylorPair.lean",
+      "sha256": "77cf06e62e02100fc43ac9c9f4a8718d5ec8ee006689a7114388b1620849e203",
+      "bytes": 2751,
+      "imports": [
+        "JSP000930PositiveMaskedProperCutTransfer"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualHaymanSentence.lean",
+      "sha256": "f56ecf8da7348cbde55f905e649eb48b321f5e1ef534e57bad07758ab303e081",
+      "bytes": 644,
+      "imports": [
+        "JSP000930WetzelSentence",
+        "JSP000930AnalyticSentence"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveLiteralHaymanFamilyAndValueSet.lean",
+      "sha256": "03318fc00b8c8c99efabc8ef5756b9721fbd9a77ba346bf191db304e7f2890fb",
+      "bytes": 2548,
+      "imports": [
+        "JSP000930PositiveEntireTaylorNameCover",
+        "JSP000930ActualHaymanSentence",
+        "JSP000930BooleanCardinalSyntax"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveActualHaymanEvalImage.lean",
+      "sha256": "a59b6c6e1c0c0c2a71a9d3b79c3f3b57f78cf4bba371a604332bf02d30287d7c",
+      "bytes": 3131,
+      "imports": [
+        "JSP000930PositiveLiteralHaymanFamilyAndValueSet"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveExactPointwiseCapWiring.lean",
+      "sha256": "1366892a83cb78c42033bcef90b99ad8a3a5be53ffa744e0753cc0d8d029b609",
+      "bytes": 4644,
+      "imports": [
+        "JSP000930PositiveActualHaymanEvalImage",
+        "JSP000930PositiveActualCohenContinuum",
+        "JSP000930PositiveActualReserveComplexPoint"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveLocalizedFreshPairActualPrefix.lean",
+      "sha256": "adac007a08adffa09e6a32e7964fac145d19fe20c645014391554cc31d90b8be",
+      "bytes": 2871,
+      "imports": [
+        "JSP000930PositiveReflectNativeDistinctValidTaylorPair",
+        "JSP000930PositiveExactPointwiseCapWiring"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveReflectCompleteNativeGrowthPair.lean",
+      "sha256": "3b7022e29a4cb0fbc6c231d78014fb2e595e2ff7425f75265ba2d98fcc556a20",
+      "bytes": 2404,
+      "imports": [
+        "JSP000930PositiveNativeGrowthMaskedCongruence",
+        "JSP000930PositiveLocalizedFreshPairActualPrefix"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositivePairedNativeEntireGroundCompletion.lean",
+      "sha256": "41fc8b022f6aa59f4fc479f06287e28a9133e26fec7c2940429ebe8f7bf7dfc6",
+      "bytes": 3738,
+      "imports": [
+        "JSP000930PositiveReflectCompleteNativeGrowthPair"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticRationalDiscs.lean",
+      "sha256": "1e4b6d4942825fc3237159c7b756e0f119bc92c337f5302f7609e69febc9778e",
+      "bytes": 4148,
+      "imports": [
+        "JSP000930AnalyticTaylorTail",
+        "Mathlib.Algebra.Order.Archimedean.Basic"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticRealIntervalCertificate.lean",
+      "sha256": "d4147968894da39f7334c74703460945aba468b055ed3313604384daed433b5c",
+      "bytes": 3322,
+      "imports": [
+        "JSP000930AnalyticRationalDiscs",
+        "Mathlib.Analysis.Analytic.IsolatedZeros"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticFiniteStability.lean",
+      "sha256": "8f30a812b7735edaa5219a6b7cec78a528902d465795a588f5b74576d5e9dc38",
+      "bytes": 3041,
+      "imports": [
+        "JSP000930AnalyticRealIntervalCertificate",
+        "Mathlib.Topology.MetricSpace.Pseudo.Pi",
+        "Mathlib.Data.Fintype.BigOperators"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveRationalSeparationBoxes.lean",
+      "sha256": "94537dfdfeee08d419700a131408d8c1e08b36220d827f830d091854cc56463f",
+      "bytes": 3743,
+      "imports": [
+        "JSP000930PositivePairedNativeEntireGroundCompletion",
+        "JSP000930AnalyticFiniteStability",
+        "Mathlib.Analysis.Complex.Basic"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveFiniteNearbyTaylorBoxes.lean",
+      "sha256": "d34dcabfe9662200846313f0c7ac58673fe8637ce9a737ad7b5b135407603a93",
+      "bytes": 2680,
+      "imports": [
+        "JSP000930PositiveRationalSeparationBoxes"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveDenseFiniteFreshTaylorCertificates.lean",
+      "sha256": "8d7098ed6f79b4f96304eb342bfbf35c556d5749370aae49148c36e3bb9c0a71",
+      "bytes": 4872,
+      "imports": [
+        "JSP000930PositiveFiniteNearbyTaylorBoxes",
+        "JSP000930PositiveRationalCertificateTransport"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveCommonComplexDecisionCompletion.lean",
+      "sha256": "2ac5062db32a728e30c7eb7edfc7da57756c64431b67940e0ae513f1bca95e2f",
+      "bytes": 1127,
+      "imports": [
+        "JSP000930PositiveDenseFiniteFreshTaylorCertificates",
+        "JSP000930AnalyticTaylorLimit"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveTraceIdentifiesNativeTaylorLimit.lean",
+      "sha256": "488732def591231090c9646d8db26e6b9af2150b1ada72c609ab1228863a4f9c",
+      "bytes": 2976,
+      "imports": [
+        "JSP000930PositiveCommonComplexDecisionCompletion"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveJointBudgetAndConvergenceTests.lean",
+      "sha256": "8b54dde03d54de955fb7a41c7861d1a49f9ab407b66c6c99399aad2d017b1687",
+      "bytes": 2840,
+      "imports": [
+        "JSP000930PositiveTraceIdentifiesNativeTaylorLimit"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveCommonNativeEvaluationGroundValues.lean",
+      "sha256": "044db0c2a2475e33aff2bd5a3b1aefd00796d59bf157b3534c23e59a5e7db3b7",
+      "bytes": 3856,
+      "imports": [
+        "JSP000930PositiveJointBudgetAndConvergenceTests"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveFiniteCertificateSoundnessInFullAlgebra.lean",
+      "sha256": "b8c06ca5ca236183e74c2f75316f71d6f3101bc6e73050cd3ee14ad5b276ba80",
+      "bytes": 3801,
+      "imports": [
+        "JSP000930PositiveCommonNativeEvaluationGroundValues"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveRationalCertificatesCompleteTransport.lean",
+      "sha256": "d001d72056ac068c47d8766dc1f62bf90fce9f0050a595895f1ba2c7e6e282cc",
+      "bytes": 2164,
+      "imports": [
+        "JSP000930PositiveFiniteCertificateSoundnessInFullAlgebra",
+        "JSP000930PositiveLocalizedFreshPairActualPrefix"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveActualFreshRowSeparatesEarlierNativeTaylor.lean",
+      "sha256": "9324c3cbd7e54db5edcde820d774c8c6549dc09eafdfd1b89412b741e15daaca",
+      "bytes": 3581,
+      "imports": [
+        "JSP000930PositiveRationalCertificatesCompleteTransport"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveNativeTaylorLimitRespectsMask.lean",
+      "sha256": "75cd9b3e524eac0300d33b053596dff53c690f283755e0eef0b5b22c65e41615",
+      "bytes": 3273,
+      "imports": [
+        "JSP000930PositiveActualFreshRowSeparatesEarlierNativeTaylor"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveActualFreshNativeReserveSeparation.lean",
+      "sha256": "ac06c8a088085ba3b9c67ecc146f7e77e863961a2dd0ea8d58b8dbf87e5dd1fc",
+      "bytes": 2987,
+      "imports": [
+        "JSP000930PositiveNativeTaylorLimitRespectsMask"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveCanonicalEntireMatchesNativeCode.lean",
+      "sha256": "2ba0432732328715dae83589b321272bced42f23af63fe7f7292455ecf6ebfad",
+      "bytes": 2204,
+      "imports": [
+        "JSP000930PositiveActualFreshNativeReserveSeparation",
+        "JSP000930AnalyticEntireGrowth"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveLiteralConditionalPositiveEndpoint.lean",
+      "sha256": "5ca70c111fc33435a604c76298959344129c634cb04655b7409b578a36880b29",
+      "bytes": 3871,
+      "imports": [
+        "JSP000930PositiveExactPointwiseCapWiring"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveNativeDataForLiteralFamilyMember.lean",
+      "sha256": "9bc71f9e9a82ace3648d996ce660e6fff82f1a051c8fe7ab342213d665157372",
+      "bytes": 2394,
+      "imports": [
+        "JSP000930PositiveCanonicalEntireMatchesNativeCode",
+        "JSP000930PositiveLiteralConditionalPositiveEndpoint"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveExactEvalCorrespondenceInterface.lean",
+      "sha256": "8395e35954c22a1fc86a64ce9a2e665e53dc0986eb7bf41aef7f1eeb7a0ee09a",
+      "bytes": 2935,
+      "imports": [
+        "JSP000930PositiveNativeDataForLiteralFamilyMember"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticLiteralEvaluation.lean",
+      "sha256": "a71c8575bc82335c26d8b0d9a0fd1685e5fb50befbf4fb4d5525d6986e74a184",
+      "bytes": 2189,
+      "imports": [
+        "JSP000930AnalyticNativeEvaluation",
+        "JSP000930PositiveExactEvalCorrespondenceInterface"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativePolynomialDecision.lean",
+      "sha256": "7dc9380da506d1d580f576c71d5ab3d5fc80175d99f23ac9b592da26dabe1e1e",
+      "bytes": 2809,
+      "imports": [
+        "JSP000930NamedComplexMetricLaw",
+        "JSP000930AnalyticLiteralEvaluation"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeFinitePolynomialGrowth.lean",
+      "sha256": "1e7065dc39af54a7048e0668bbf5d680d3d3f3e2b10d9479cf54d3b5a604b8fa",
+      "bytes": 6159,
+      "imports": [
+        "JSP000930NegativePolynomialDecision"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeFinitePolynomialEvaluation.lean",
+      "sha256": "a169b924fcd6cd59f4690d6db59aeabc3c246929dd0637828f53a245a69e87ff",
+      "bytes": 5837,
+      "imports": [
+        "JSP000930NegativeFinitePolynomialGrowth"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveCanonicalCutsForceLiteralSequence.lean",
+      "sha256": "70943fd1ca71bca4ceb2f9fad1fbc4d24b8220f246c7d4765b51af19d1916d93",
+      "bytes": 4881,
+      "imports": [
+        "JSP000930PositiveExactEvalCorrespondenceInterface",
+        "JSP000930AnalyticFiniteComplexGraph"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveCanonicalNativeGrowthForcesLiteralEntire.lean",
+      "sha256": "31d17aeb53a7e0263033b5b364826ce1c46e0b239a8b4117e18c9837398484a8",
+      "bytes": 2187,
+      "imports": [
+        "JSP000930PositiveCanonicalCutsForceLiteralSequence"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeFinitePolynomialLiteral.lean",
+      "sha256": "15352d44a71a48d5fabd6272e3a185743d730bb928c1e50e352e3a826e4f1a3a",
+      "bytes": 2507,
+      "imports": [
+        "JSP000930NegativeFinitePolynomialEvaluation",
+        "JSP000930PositiveCanonicalNativeGrowthForcesLiteralEntire"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativePolynomialCauchyEstimate.lean",
+      "sha256": "c59456beadeee91aa6c8b956337ce1498a5217ef6ec11b613c4defc25bc1090c",
+      "bytes": 5209,
+      "imports": [
+        "JSP000930NegativeFinitePolynomialLiteral",
+        "JSP000930PolynomialTraceValues",
+        "Mathlib.Analysis.Complex.Liouville"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeCoefficientGrid.lean",
+      "sha256": "0d4ee3e07c71d70be6b1a5046e423e720c31ad413875846e6b2c84698aea45a6",
+      "bytes": 4482,
+      "imports": [
+        "JSP000930NegativePolynomialCauchyEstimate"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativePolynomialMix.lean",
+      "sha256": "d7964f3aa4b13afa6d09497cad3dc839d00fc01309712df1116e74f3c747bfa4",
+      "bytes": 5530,
+      "imports": [
+        "JSP000930NegativeCoefficientGrid",
+        "Mathlib.SetTheory.Cardinal.Order"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativePolynomialDistance.lean",
+      "sha256": "1df7844b891e523527c80ed721cb82d2ec8e07da5038754213588f1fbb61588f",
+      "bytes": 3072,
+      "imports": [
+        "JSP000930NegativePolynomialMix"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativePolynomialTower.lean",
+      "sha256": "251651b3e626f4af60c0fb2d41d27961d28e9cd9a48f8b8bf3f6694be8d2026f",
+      "bytes": 6267,
+      "imports": [
+        "JSP000930NegativePolynomialDistance"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeActualFineTower.lean",
+      "sha256": "4d702b8d853a7f1e2278312791e9f74393fb3003574042aa9dd1a2e1f7908c2c",
+      "bytes": 5674,
+      "imports": [
+        "JSP000930NegativePolynomialTower",
+        "JSP000930GenericFineTraceCovers"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativePolynomialLimitDistance.lean",
+      "sha256": "ef9d0963a794f4a4df61c4cf1ff3cb6925da8718df29cf646d4a917f169cb04a",
+      "bytes": 5288,
+      "imports": [
+        "JSP000930NegativeActualFineTower"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativePolynomialLimitGrowth.lean",
+      "sha256": "4f92fae07ad83c8ce3f427877883e8465eac80145c0892b6e801ee4512c92bae",
+      "bytes": 5207,
+      "imports": [
+        "JSP000930NegativePolynomialLimitDistance"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativePolynomialValueDistance.lean",
+      "sha256": "40bfbb733fe920a3c3fbd52c33c73c9bdeb387446d3fa3b640845c29bbaf51ca",
+      "bytes": 4687,
+      "imports": [
+        "JSP000930NegativePolynomialLimitGrowth",
+        "JSP000930PositiveCommonNativeEvaluationGroundValues"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativePolynomialNamedGrid.lean",
+      "sha256": "adf8befa83e40d8002f63071e196149fe0fee62168fcfb4d48c5e4aad2dd3acd",
+      "bytes": 3607,
+      "imports": [
+        "JSP000930NegativePolynomialValueDistance"
+      ]
+    },
+    {
+      "path": "src/JSP000930OldWitnessNearCenter.lean",
+      "sha256": "02380423a5c23be3915854e8014439ded7425ab7e4eba48008503a6c714669cb",
+      "bytes": 1762,
+      "imports": [
+        "JSP000930OldDenseSetActualCenter",
+        "JSP000930NegativePolynomialNamedGrid"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativePinAvoidance.lean",
+      "sha256": "54d5a2719f9a2f59e7c4aaf62d81b7595b0d34fa2a065b48ae0e577718f80fc4",
+      "bytes": 9125,
+      "imports": [
+        "JSP000930LocalNamedPinDensity"
+      ]
+    },
+    {
+      "path": "src/JSP000930RetargetedRefinesIncoming.lean",
+      "sha256": "98e5a6fc62339196b447e099ff29b04bf3dfd6c9d977157588162112dd9e05a4",
+      "bytes": 5568,
+      "imports": [
+        "JSP000930OldWitnessNearCenter",
+        "JSP000930NegativePinAvoidance"
+      ]
+    },
+    {
+      "path": "src/JSP000930IncomingSymbolicGeometry.lean",
+      "sha256": "c7cd5830295b19e568ee82c57fce1cfc702045d8fb3bac6e592e430ccde63a33",
+      "bytes": 5235,
+      "imports": [
+        "JSP000930RetargetedRefinesIncoming"
+      ]
+    },
+    {
+      "path": "src/JSP000930MarkedAnalyticRowProduct.lean",
+      "sha256": "b15fcfe07bbcfd9e661e4c6fc68697f2dec770c389dbc12000d0f3c1718831ab",
+      "bytes": 1544,
+      "imports": [
+        "JSP000930IncomingSymbolicGeometry"
+      ]
+    },
+    {
+      "path": "src/JSP000930OldDenseProductCenters.lean",
+      "sha256": "245ace3f333853c5f08dd7a7a3629ba08881518f84b0f93b4857cc7d8848729d",
+      "bytes": 4494,
+      "imports": [
+        "JSP000930MarkedAnalyticRowProduct"
+      ]
+    },
+    {
+      "path": "src/JSP000930FiniteOldMarkChoices.lean",
+      "sha256": "f9749332385a4b52bba236800243eb6dc7e43dc5cb314ada8d0f2cd97f82ce6a",
+      "bytes": 1155,
+      "imports": [
+        "JSP000930OldDenseProductCenters"
+      ]
+    },
+    {
+      "path": "src/JSP000930CohenWordPairMetric.lean",
+      "sha256": "bc3abc86c865fd93cb99fef460568be8a17662b99f17e5bcf37067753bf46ff4",
+      "bytes": 2402,
+      "imports": [
+        "JSP000930FiniteOldMarkChoices"
+      ]
+    },
+    {
+      "path": "src/JSP000930CohenManyStrictInteriors.lean",
+      "sha256": "b0097955f634266790cda7860756c2dbc96c7342977e9730eaa1c5955acca3d6",
+      "bytes": 3358,
+      "imports": [
+        "JSP000930CohenWordPairMetric"
+      ]
+    },
+    {
+      "path": "src/JSP000930CohenRetargetManyValues.lean",
+      "sha256": "21fd859e1380ad9e082d025507f73ed5413ec5d6eaf8322ae384d9a3f027b082",
+      "bytes": 4925,
+      "imports": [
+        "JSP000930CohenManyStrictInteriors"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticFiniteProductCompatibility.lean",
+      "sha256": "dc5732caa37a25a0455232a896d0bbb97466792552bf0c081129e9ce5dea18ba",
+      "bytes": 1910,
+      "imports": [
+        "JSP000930CohenRetargetManyValues"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticMarkedProductPrefix.lean",
+      "sha256": "defbfe0486c242c730e2ea5e0a7df7e301771f7f6d0283fc0d26f8f5cfb53ac3",
+      "bytes": 4052,
+      "imports": [
+        "JSP000930AnalyticFiniteProductCompatibility"
+      ]
+    },
+    {
+      "path": "src/JSP000930EarlierCenterBudget.lean",
+      "sha256": "44122796b9a39bcc6cf6292ed2b255eb6fdc089f140224ef9126189f9dc696d6",
+      "bytes": 3173,
+      "imports": [
+        "JSP000930AnalyticMarkedProductPrefix"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticProductRealLabels.lean",
+      "sha256": "15f5d29862cb55d3dddc5cbec919db0c91df02fe56380c30247c5aed429d9ec0",
+      "bytes": 2487,
+      "imports": [
+        "JSP000930EarlierCenterBudget"
+      ]
+    },
+    {
+      "path": "src/JSP000930FreshActualCenterPlans.lean",
+      "sha256": "fc90c94a6e48a177b4f87cdbf862a90aba3dfeb7ca9c8b7967f73e2b02e97e58",
+      "bytes": 4774,
+      "imports": [
+        "JSP000930AnalyticProductRealLabels"
+      ]
+    },
+    {
+      "path": "src/JSP000930FreshPinRows.lean",
+      "sha256": "fe27d0a0c915c5f6c5ef08bb715766fefd6fc605e1c859783921fe17ef09de96",
+      "bytes": 1187,
+      "imports": [
+        "JSP000930FreshActualCenterPlans"
+      ]
+    },
+    {
+      "path": "src/JSP000930OldRawRefinementTransport.lean",
+      "sha256": "363724197f8142edfe7c19bc6787baafa9f787c81032111c71382242a7b8cbd4",
+      "bytes": 1986,
+      "imports": [
+        "JSP000930FreshActualCenterPlans"
+      ]
+    },
+    {
+      "path": "src/JSP000930FreshCenterBatches.lean",
+      "sha256": "b50f022005d24375b83f062669b03fdd9e4bad6b9650acd7ec75d95c047ec6b3",
+      "bytes": 6288,
+      "imports": [
+        "JSP000930FreshPinRows",
+        "JSP000930OldRawRefinementTransport"
+      ]
+    },
+    {
+      "path": "src/JSP000930OldPinDenominatorTransport.lean",
+      "sha256": "8ba1f548532db25cc6a921c2488ddc2ab91a2b298407c8233aea3981d930e90c",
+      "bytes": 3269,
+      "imports": [
+        "JSP000930FreshCenterBatches"
+      ]
+    },
+    {
+      "path": "src/JSP000930OldWitnessPinGuard.lean",
+      "sha256": "eebdea2bf092e85f1dc39e2d229a07e2f8e617ef9a543bbed90ae3000e742ea2",
+      "bytes": 5595,
+      "imports": [
+        "JSP000930OldPinDenominatorTransport"
+      ]
+    },
+    {
+      "path": "src/JSP000930RawFreshRowCompatibility.lean",
+      "sha256": "b175684eeaa6933114a3cac33bb93987143e1b8473b9fbb5e1f6010da61e0dc3",
+      "bytes": 3234,
+      "imports": [
+        "JSP000930OldWitnessPinGuard"
+      ]
+    },
+    {
+      "path": "src/JSP000930FreshTargetBatches.lean",
+      "sha256": "35eff20053c3196ad774d50af4a75a75b797dd2ff6f317e9dac5b93221a9adc9",
+      "bytes": 3740,
+      "imports": [
+        "JSP000930RawFreshRowCompatibility"
+      ]
+    },
+    {
+      "path": "src/JSP000930RawRowsAfterCohenMove.lean",
+      "sha256": "3090585628bd44ad6d307e110fa0ebcede4ed1bdb4967ba90c48f3ecf2d9ec34",
+      "bytes": 7437,
+      "imports": [
+        "JSP000930FreshTargetBatches"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualFreshAllocationPredensity.lean",
+      "sha256": "b23ff0904cd3787ea02a7d56bdd15f8b97fc639ff23bb57862075b812dcbee9e",
+      "bytes": 6044,
+      "imports": [
+        "JSP000930RawRowsAfterCohenMove"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeTracePlacement.lean",
+      "sha256": "3d2c10751c12cdc6b420003357534f2871b291777966d5bb55ba3c58b0a853f0",
+      "bytes": 2645,
+      "imports": [
+        "JSP000933RelativeSmallQuotientCH",
+        "JSP000933GroundKappaTraceEnum"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeReindexedAmbientAntichain.lean",
+      "sha256": "9b4618e29b41b9a53f75b2549dbf1dd52ea882da840c2946b3d0f4b6398cb36a",
+      "bytes": 3058,
+      "imports": [
+        "JSP000930NegativeTracePlacement"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeCountablePlacementTables.lean",
+      "sha256": "5e007b3dae5ac66593d0d74e43e54e81d4393af118eb418f6267e284c69a5c2a",
+      "bytes": 4654,
+      "imports": [
+        "JSP000930NegativeReindexedAmbientAntichain"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeSmallAmbientRectangleRealCover.lean",
+      "sha256": "7e6fd4b48d2be6438025a9aff88ec5c706e6c0df48f60cc9bdd6cf4d8a695634",
+      "bytes": 2003,
+      "imports": [
+        "JSP000930NegativeCountablePlacementTables"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeCheckedKappaCutTraceWeights.lean",
+      "sha256": "479ca4a667cba1195bd7acc039bee564f7ecf86291e219f39f14ba5f80ea9300",
+      "bytes": 4178,
+      "imports": [
+        "JSP000930NegativeSmallAmbientRectangleRealCover",
+        "JSP000930PositiveOneReserveUnboundedFamily",
+        "JSP000933PreparedSmallTraceEnum",
+        "JSP000933LocalKappaTraceSupport"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeActualFinalKappaRealCover.lean",
+      "sha256": "c9973a7fac76f497ee36183df0a0dc63a191d5222e941301badbdb24f74c4adc",
+      "bytes": 3164,
+      "imports": [
+        "JSP000930NegativeCheckedKappaCutTraceWeights",
+        "JSP000930PositiveActualCohenContinuum"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeLiteralFinalContinuum.lean",
+      "sha256": "4cce88fe7b69ac550ee13d6d7a01fd9e786138e54b51aa7594e5116581d3177f",
+      "bytes": 2282,
+      "imports": [
+        "JSP000930NegativeActualFinalKappaRealCover"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeSmallNamedPaletteImages.lean",
+      "sha256": "02caf2b3fe6fb3072984f87f57da908c7f3557358afd756ecf868832080630f4",
+      "bytes": 2150,
+      "imports": [
+        "JSP000930NegativeLiteralFinalContinuum",
+        "JSP000933RelativeMixedEnumTransport"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeNamedPaletteScheduleCardinals.lean",
+      "sha256": "17cecf99487d05f7d099d7de0040fecc86f440515398c852a04c294fbfecec66",
+      "bytes": 4647,
+      "imports": [
+        "JSP000930NegativeSmallNamedPaletteImages",
+        "JSP000930PositiveNativeGrowthNaturality",
+        "JSP000930AnalyticTaylorLimit"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeMixSiteCore.lean",
+      "sha256": "40f641aa5ed8b696cdf90fbc059f508c23c6ddb12c6bb8586188393d577cc5b1",
+      "bytes": 3639,
+      "imports": [
+        "JSP000930NegativeNamedPaletteScheduleCardinals",
+        "JSP000930PositiveNativeTaylorLimitRespectsMask",
+        "JSP000930PositiveCheckedKappaPreservation"
+      ]
+    },
+    {
+      "path": "src/JSP000930MixedLabelAvoidance.lean",
+      "sha256": "d7cebbe3bef6c760a45361c4d1e64105a926f55fe1ad7320c5af0fb2aaddfe50",
+      "bytes": 2856,
+      "imports": [
+        "JSP000933RelativeDiscreteChoices"
+      ]
+    },
+    {
+      "path": "src/JSP000930MixedRankAvoidance.lean",
+      "sha256": "51c2fa7e8cff92af70402ec9896ae87150ff606f8933e9a04dbcff9004ee6eab",
+      "bytes": 4043,
+      "imports": [
+        "JSP000930MixedLabelAvoidance"
+      ]
+    },
+    {
+      "path": "src/JSP000930MixedPaletteTable.lean",
+      "sha256": "51c4a6a10aa7df639fe380715358245f06fdda2cc5a60e8bb3bee06693de55a5",
+      "bytes": 2746,
+      "imports": [
+        "JSP000930MixedRankAvoidance"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualPreparedRanks.lean",
+      "sha256": "9caa512f755ab8c6c54d022260d341ecfcedda2484b5cef9afd7975a40431ae8",
+      "bytes": 3099,
+      "imports": [
+        "JSP000930MixedPaletteTable",
+        "JSP000933PreparedSmallTraceEnum",
+        "JSP000933RelativeMixedEnumTransport",
+        "JSP000933PreparedNameCodes"
+      ]
+    },
+    {
+      "path": "src/JSP000930MixedRankPreimageBound.lean",
+      "sha256": "00b5f2c828b162574d627fa0073d14848214f3aa744ad91858ee19636f690419",
+      "bytes": 3655,
+      "imports": [
+        "JSP000930ActualPreparedRanks"
+      ]
+    },
+    {
+      "path": "src/JSP000930MixedOverlapSupport.lean",
+      "sha256": "6aa64655e92a4dd0762b16a8a30b3af34dc7045bb1d23b20fa6473fc827826a9",
+      "bytes": 2511,
+      "imports": [
+        "JSP000930MixedPaletteTable"
+      ]
+    },
+    {
+      "path": "src/JSP000930MixedPairOverlapCut.lean",
+      "sha256": "b857847bbe5e4b7c04ccdeb6a0d54087fed50febabda150b70920ab51ba3b89a",
+      "bytes": 3379,
+      "imports": [
+        "JSP000930MixedRankPreimageBound",
+        "JSP000930MixedOverlapSupport"
+      ]
+    },
+    {
+      "path": "src/JSP000930FiniteCofinalPairCuts.lean",
+      "sha256": "36bdbb542205d5c84ecd41f072045ebcc7d49d4fe5e3a5ec4046611c8ee4d3d7",
+      "bytes": 3135,
+      "imports": [
+        "JSP000930MixedPairOverlapCut"
+      ]
+    },
+    {
+      "path": "src/JSP000930CoherentPreparedPalettes.lean",
+      "sha256": "dc1288154d11833805f82be3de7ef0ebe14b59f9e3b8cc774583ca0c98f9851e",
+      "bytes": 2410,
+      "imports": [
+        "JSP000930FiniteCofinalPairCuts",
+        "JSP000933PreparedPrefixCHRealCodes"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualMixedFreshPalettes.lean",
+      "sha256": "b24bb9a90054ae0b20e074457cd8e3273d5afbfb7a29726f65db6780066433fd",
+      "bytes": 5768,
+      "imports": [
+        "JSP000930ActualFreshAllocationPredensity",
+        "JSP000930NegativeMixSiteCore",
+        "JSP000930CoherentPreparedPalettes"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualCohenSuccessorPredensity.lean",
+      "sha256": "faf0f7b8adc6fd093ba460b137782dad09956b3d1d92960e43e974d0dda4510b",
+      "bytes": 3932,
+      "imports": [
+        "JSP000930ActualMixedFreshPalettes"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeActualBooleanPrefixReductions.lean",
+      "sha256": "3494e0171bae3bb0213628910c563941792717a1c093c20f0b02cd4b8d647631",
+      "bytes": 2242,
+      "imports": [
+        "JSP000933CompleteValueMap",
+        "JSP000933ProjectedSuccessorCCC"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeExactProjectedRelativeCCC.lean",
+      "sha256": "9f9fa74f010a7f102aedfe684d2d001a90482b642c6489a9460652b8ff8098a5",
+      "bytes": 3312,
+      "imports": [
+        "JSP000930NegativeActualBooleanPrefixReductions",
+        "JSP000933RelativeTraceEnumeration",
+        "JSP000933NativeBasePrefixCoherence"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeCountableCofinalDenseUnion.lean",
+      "sha256": "8c1ecab845c90fc3946668d9af7b49e423b187827116085a23a49875dc5327ba",
+      "bytes": 3979,
+      "imports": [
+        "JSP000930NegativeExactProjectedRelativeCCC"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeRelativePressingDown.lean",
+      "sha256": "4bab865e7fbd3be0a67a6aeda83d7dbf6e5654b0adf2658a3b0e93d8032dcde0",
+      "bytes": 5513,
+      "imports": [
+        "JSP000930NegativeCountableCofinalDenseUnion",
+        "JSP000933CountableChoiceProfiles"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeOmegaOneSegmentedOccurrences.lean",
+      "sha256": "3f6fa275b3692cbdfd33dffee912670849df060314696f3d8d3609abe076184d",
+      "bytes": 4844,
+      "imports": [
+        "JSP000930NegativeRelativePressingDown",
+        "JSP000933RelativeDiscreteChoices"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeProjectedSkewAntichains.lean",
+      "sha256": "2194509ca94b8eb9e61b2bff1f088e3f400090e425623e7a97659f5394fa258a",
+      "bytes": 3172,
+      "imports": [
+        "JSP000930NegativeOmegaOneSegmentedOccurrences",
+        "JSP000933RelativeKappaAntichainBound"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeCheckedOmegaTowerReductions.lean",
+      "sha256": "ff808ad827752e0161ab2df6a3d005bd21cf1c6fe4f3fcb2aacd7f20db6d13be",
+      "bytes": 3720,
+      "imports": [
+        "JSP000930NegativeProjectedSkewAntichains"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeRelativeOmegaOneContinuousLimit.lean",
+      "sha256": "b8a3a4697a0e8064f5e2061a283c7ec9576620a540146002fdccae76bcd40127",
+      "bytes": 4300,
+      "imports": [
+        "JSP000930NegativeCheckedOmegaTowerReductions"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeCompleteStageTowerOccurrences.lean",
+      "sha256": "7f0d77a6a6ca3c28b40fc56d4398a2717d05ce9f914c2261cfc2cffba941c502",
+      "bytes": 3167,
+      "imports": [
+        "JSP000930NegativeRelativeOmegaOneContinuousLimit"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeRelativeCheckedKappaContinuousLimit.lean",
+      "sha256": "faf08df90649a462c529e1f73d4df3a9183895e135d2e2b4ca0813f402c21b40",
+      "bytes": 4401,
+      "imports": [
+        "JSP000930NegativeCompleteStageTowerOccurrences",
+        "JSP000933PreparedKappaBounds"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeCountableMixedGroundStageProfiles.lean",
+      "sha256": "1f11cfe6b4dde7158a42bae80e04700a57a8eac9788ab4c3417f7c976390562e",
+      "bytes": 3209,
+      "imports": [
+        "JSP000930NegativeRelativeCheckedKappaContinuousLimit"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeNextGenuineMixedStage.lean",
+      "sha256": "b67c43ca760003942d67f943bd80e5a72f11e142daa136aafe3c8b98303165f6",
+      "bytes": 5706,
+      "imports": [
+        "JSP000930NegativeCountableMixedGroundStageProfiles"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeMixedCofinalContinuousStageSequence.lean",
+      "sha256": "3fc10524e30333603b33a1a5e3783cf387a7bd31cfc63210b7b969a41ce47f47",
+      "bytes": 5429,
+      "imports": [
+        "JSP000930NegativeNextGenuineMixedStage"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeMixedStageReductionsAndCompatibility.lean",
+      "sha256": "2e061be7af5c671b0c5bca9834f3a210e612b5e67c36e4d3e9bbacfdfaa58dec",
+      "bytes": 4432,
+      "imports": [
+        "JSP000930NegativeMixedCofinalContinuousStageSequence"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeGenuineMixedRegressiveReductions.lean",
+      "sha256": "65d916fd07dc7e640d4641efbcabbc5892e8af9897e9489240047e0d1e3a5451",
+      "bytes": 5710,
+      "imports": [
+        "JSP000930NegativeMixedStageReductionsAndCompatibility"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeActualMixedOmegaOneRelativeLimitCCC.lean",
+      "sha256": "0be0683e65a9feb7b7172bd9f415d11dbda0b30fa4db9e5d2558d21d40319a13",
+      "bytes": 3077,
+      "imports": [
+        "JSP000930NegativeGenuineMixedRegressiveReductions"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeAllPreparedSmallContinuousLimits.lean",
+      "sha256": "104b2da0853e2a8efe22f13e7f3633e69ef2008664f0c98e10c67d166c72e4ae",
+      "bytes": 2382,
+      "imports": [
+        "JSP000930NegativeActualMixedOmegaOneRelativeLimitCCC",
+        "JSP000933PreparedSmallTraceEnum",
+        "JSP000933PreparedPrefixCHRealCodes",
+        "JSP000933PreparedProduct"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeRealPreparedRelativeDirectLimitCCC.lean",
+      "sha256": "53faf7533744efb506863d145f103b51430c8acd062f3e83d0b81035dbe1456b",
+      "bytes": 2587,
+      "imports": [
+        "JSP000930NegativeAllPreparedSmallContinuousLimits",
+        "JSP000930PositiveActualCohenContinuum",
+        "JSP000930PositiveMixedEnumerationInjection"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeInertOutsideAndGlue.lean",
+      "sha256": "1c5d586d5c722d15abcda108f56b47f70e4ca0acadabb31bd35298178ac953aa",
+      "bytes": 4031,
+      "imports": [
+        "JSP000930NegativeRealPreparedRelativeDirectLimitCCC"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeInertRelativeCCC.lean",
+      "sha256": "bcf56e4e7af2da93a65d7a22786ebb8d58afa056f76e9b684301abcadc4781f8",
+      "bytes": 4464,
+      "imports": [
+        "JSP000930NegativeInertOutsideAndGlue"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeLocalTraceInclusion.lean",
+      "sha256": "3f4986660c4b65544ac764a6892f7dfba19a98fd318cecd8a772bc943cb097ae",
+      "bytes": 4105,
+      "imports": [
+        "JSP000930NegativeInertRelativeCCC",
+        "JSP000930RegularOpenPredensity"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualMarkedCohenSuccessor.lean",
+      "sha256": "2fda1d28938d13003e8dd818db9c0b97ce8820c926323349e7ebbbbfb23aca5b",
+      "bytes": 5237,
+      "imports": [
+        "JSP000930ActualCohenSuccessorPredensity",
+        "JSP000930NegativeLocalTraceInclusion"
+      ]
+    },
+    {
+      "path": "src/JSP000930CertifiedWeightedStage.lean",
+      "sha256": "b24eb65ed90dde4526c17603bf05e3e54d0c8bad679ae2179fa298285dc1efea",
+      "bytes": 4697,
+      "imports": [
+        "JSP000930ActualMarkedCohenSuccessor"
+      ]
+    },
+    {
+      "path": "src/JSP000930CertifiedMarkedPoset.lean",
+      "sha256": "898fd642e43e655f5008313ec9e7220777df7b6093a2e7183f91feb4dd831c3e",
+      "bytes": 789,
+      "imports": [
+        "JSP000930CertifiedWeightedStage",
+        "JSP000933NativeMarkedSuccessor"
+      ]
+    },
+    {
+      "path": "src/JSP000930CertifiedWeightedForcingEquivalence.lean",
+      "sha256": "c458f1c0822b605d0a7bf2e30e5445418843d2d21b7b281b43ec91559bcb0d23",
+      "bytes": 3208,
+      "imports": [
+        "JSP000930CertifiedMarkedPoset"
+      ]
+    },
+    {
+      "path": "src/JSP000930NativeCertifiedSuccessor.lean",
+      "sha256": "e3bf9dbfaea3272b1d11cf95e6381a008421d443c4bda504cda64bf8bc4d25ad",
+      "bytes": 2448,
+      "imports": [
+        "JSP000930CertifiedWeightedForcingEquivalence"
+      ]
+    },
+    {
+      "path": "src/JSP000930CompleteMapFromNativeIso.lean",
+      "sha256": "21457dd40613f3d03236d7ecbc93c8a5f632645aaa3282d8c86ad85919b145e7",
+      "bytes": 761,
+      "imports": [
+        "JSP000930NativeCertifiedSuccessor",
+        "JSP000933NativeSuccessorPreservation"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualIndependentTwoStep.lean",
+      "sha256": "5f4a901e1ca2c491ee37d2bd4a55dd04f0a2ca73045f221f8d5c70b0a6cd4ae0",
+      "bytes": 4239,
+      "imports": [
+        "JSP000930CompleteMapFromNativeIso",
+        "JSP000930MarkedForcingPairOps",
+        "JSP000933StaticSuccessor"
+      ]
+    },
+    {
+      "path": "src/JSP000930IndependentFactorTransport.lean",
+      "sha256": "ec9844074034c37e709661481e3f929b895fd4355704264a5ac941e3ff24cbf2",
+      "bytes": 2554,
+      "imports": [
+        "JSP000930ActualIndependentTwoStep"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualIndependentSuccessor.lean",
+      "sha256": "cb47647c7c276055722c25070294104d773abcdb58cdeaaa1e6474d9a09feba7",
+      "bytes": 2226,
+      "imports": [
+        "JSP000930IndependentFactorTransport"
+      ]
+    },
+    {
+      "path": "src/JSP000930FixedTaggedStageForcing.lean",
+      "sha256": "6a787a8f7ae8c7e72bff99b6f4d262feb8c18234eb7dba7811befa069b13ec3f",
+      "bytes": 5100,
+      "imports": [
+        "JSP000930ActualIndependentSuccessor"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualWetzelMasterLabels.lean",
+      "sha256": "292ece9893f3705eacbebad73e75dd9f09ce8dea1ed7d7a3b9077bc316d04796",
+      "bytes": 2792,
+      "imports": [
+        "JSP000930FixedTaggedStageForcing",
+        "JSP000930PositiveActualCohenCoordinates"
+      ]
+    },
+    {
+      "path": "src/JSP000930WetzelLabelCardinality.lean",
+      "sha256": "c14a0b257a6cf8c384243b0d346fd3a1f220419fc74885f33bb569cb88df0343",
+      "bytes": 4173,
+      "imports": [
+        "JSP000930ActualWetzelMasterLabels"
+      ]
+    },
+    {
+      "path": "src/JSP000930BootstrappedWetzelTail.lean",
+      "sha256": "7871fc3a25fbf718b078db24d47767dcb1236194d98530dac5228129d7f60ef0",
+      "bytes": 2376,
+      "imports": [
+        "JSP000930WetzelLabelCardinality",
+        "JSP000933NativeBasePrefixCoherence"
+      ]
+    },
+    {
+      "path": "src/JSP000930WetzelStageOrder.lean",
+      "sha256": "7cb0c52eec5b3bf33bb3c8ba9477b8314dfb551f24193c700a753a6390223cfa",
+      "bytes": 2216,
+      "imports": [
+        "JSP000930BootstrappedWetzelTail"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualPreparedBeforeBulk.lean",
+      "sha256": "6d7de2652d551819a74468387fcf2b0d32d0482a847074631ee4e766fc235dee",
+      "bytes": 3305,
+      "imports": [
+        "JSP000930WetzelStageOrder"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualWetzelBulkStage.lean",
+      "sha256": "80923f9c336e62e37ff88d8044efab942c5bbbf60e0aef0edce46c9058e7f731",
+      "bytes": 2040,
+      "imports": [
+        "JSP000930ActualPreparedBeforeBulk"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualWetzelBulkCoherence.lean",
+      "sha256": "97a231a9ada626e4737558db40ac2370f169be815b5f5b715c6c09c1087acb39",
+      "bytes": 5278,
+      "imports": [
+        "JSP000930ActualWetzelBulkStage"
+      ]
+    },
+    {
+      "path": "src/JSP000930MarkedForcingPairOps.lean",
+      "sha256": "d9869cffa17499cc4b9e5d586f51403f17f13f7f13e4b07a17489b14293546d1",
+      "bytes": 2588,
+      "imports": [
+        "JSP000933RelativeCCCProjection",
+        "JSP000933CompleteValueMap"
+      ]
+    },
+    {
+      "path": "src/JSP000930JointProjectedTraceWeights.lean",
+      "sha256": "0284112759c32570e1871e743d4dc92509c9de9c946a65ae605b5548667c7afd",
+      "bytes": 2204,
+      "imports": [
+        "JSP000930MarkedForcingPairOps",
+        "JSP000933MarkedNameTransport"
+      ]
+    },
+    {
+      "path": "src/JSP000930RelativeCCCProductFactor.lean",
+      "sha256": "bf03cf1470e5c6e98c5c93ab292a1efeb938a0533b31b0a7ec1afe329c07dd49",
+      "bytes": 2512,
+      "imports": [
+        "JSP000930JointProjectedTraceWeights"
+      ]
+    },
+    {
+      "path": "src/JSP000930RelativeCCCCohenProduct.lean",
+      "sha256": "0d9654d64d2ea8bf77877d5fa5326c741a3a52386f8e8a3436f8f2e4731b0cb5",
+      "bytes": 4278,
+      "imports": [
+        "JSP000930RelativeCCCProductFactor",
+        "JSP000930PositiveMarkedCohenCCC"
+      ]
+    },
+    {
+      "path": "src/JSP000930RelativeCCCInitialAndCohen.lean",
+      "sha256": "539d6b76d4d18bc6f58594b5834fae740654d9b5ca558ac092d363f6d842e810",
+      "bytes": 1912,
+      "imports": [
+        "JSP000930RelativeCCCCohenProduct",
+        "JSP000930SymbolicTraceCardinality"
+      ]
+    },
+    {
+      "path": "src/JSP000930RelativeCCCLabelCharts.lean",
+      "sha256": "a7a257cf65d89bbd58d1dd630db151c0b1fd2d8105d3941f3eb7f29633a5709b",
+      "bytes": 2535,
+      "imports": [
+        "JSP000930ActualWetzelBulkCoherence",
+        "JSP000930RelativeCCCInitialAndCohen"
+      ]
+    },
+    {
+      "path": "src/JSP000930RelativeCCCBaseCoherentDense.lean",
+      "sha256": "fd477b204999be5139ff0cd25d18c9e7a0d65ebe29e4cc8faf75924e1aa1df1b",
+      "bytes": 2983,
+      "imports": [
+        "JSP000930RelativeCCCLabelCharts",
+        "JSP000933NativeSuccessorCCC"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualWorkRelativeCCC.lean",
+      "sha256": "8d5dc8a1562f13644c2aa8b268d69d49d50e077e4a1c48c6b5a7a1e2199a4a1c",
+      "bytes": 1977,
+      "imports": [
+        "JSP000930RelativeCCCBaseCoherentDense"
+      ]
+    },
+    {
+      "path": "src/JSP000930NativeWorkingProjectedCCC.lean",
+      "sha256": "a101b9075ac3f5e030a68a0d3e272f718332e5d54a5030dec17e135dd2624982",
+      "bytes": 2817,
+      "imports": [
+        "JSP000930ActualWorkRelativeCCC"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualBulkProjectedCCC.lean",
+      "sha256": "30b1d2d5c27223bdea07f8ce4a57150364c64f7f4b0ceaa460c3abed6be8fc80",
+      "bytes": 3022,
+      "imports": [
+        "JSP000930NativeWorkingProjectedCCC",
+        "JSP000933PreparedPrefixCHRealCodes"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualEarlierHistoryMaps.lean",
+      "sha256": "9aa703d91695037b97d1aae302f5d389a8d144a8fa6a4754d5f72a763a08a1b1",
+      "bytes": 4083,
+      "imports": [
+        "JSP000930ActualBulkProjectedCCC",
+        "JSP000933PartialHistory"
+      ]
+    },
+    {
+      "path": "src/JSP000930FiniteMasterTailCardinality.lean",
+      "sha256": "b131ae572d5683e9f500cd44360f57e8c2e27d02524c777b0b2993f0c087088d",
+      "bytes": 2272,
+      "imports": [
+        "JSP000930ActualEarlierHistoryMaps",
+        "JSP000933NativeGroundTailCarriers"
+      ]
+    },
+    {
+      "path": "src/JSP000930NativeWetzelRelativePresentations.lean",
+      "sha256": "4e643c2ad1da6838350d18d77811345cae6dc5dd10dfcd9f983890a1c84f4510",
+      "bytes": 3167,
+      "imports": [
+        "JSP000930FiniteMasterTailCardinality",
+        "JSP000933RawTailCCCAndTraceJoins"
+      ]
+    },
+    {
+      "path": "src/JSP000930WetzelNativePreparedCoherence.lean",
+      "sha256": "dc77426634cac2c9326783f13bf532a6c3142f75b654eeb07d8e1b88ab0953f0",
+      "bytes": 2605,
+      "imports": [
+        "JSP000930NativeWetzelRelativePresentations"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeExplicitPlacementBook.lean",
+      "sha256": "5b91412e90130fc2264cd01b1eafd7548aa63cf71d938e5cb50f293de5079af6",
+      "bytes": 3551,
+      "imports": [
+        "JSP000930NegativeActualFinalKappaRealCover"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativePlacementPrefixReduction.lean",
+      "sha256": "62599766eee47c811eb8267604131d72a9d62a958ffa9c14ffcce1e77e0f1eff",
+      "bytes": 3069,
+      "imports": [
+        "JSP000930NegativeExplicitPlacementBook",
+        "JSP000933GroundKappaTraceEnum"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualWetzelPlacementSystem.lean",
+      "sha256": "79e09d9f02e74a15dcffffbc62692a01f373d7b5e4e43debee554cf6df990f6c",
+      "bytes": 4088,
+      "imports": [
+        "JSP000930WetzelNativePreparedCoherence",
+        "JSP000933ExactNativeTraceCoherence",
+        "JSP000930NegativePlacementPrefixReduction"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeDistinctSiteCapturesTrial.lean",
+      "sha256": "1e525ef91acd04b3e6ee83f7498153bbf554b96a27a32868ca60b8b40ada47f0",
+      "bytes": 4124,
+      "imports": [
+        "JSP000930NegativeMixSiteCore",
+        "JSP000933RelativeChoiceNormalization"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeDistinctDyadicCutRows.lean",
+      "sha256": "5bc667551f27d7712d297ec4918775ef814b74f1ac599911f551e6124966c27e",
+      "bytes": 4401,
+      "imports": [
+        "JSP000930PositiveActualDyadicCutName",
+        "JSP000930NegativeDistinctSiteCapturesTrial"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeActualBulkReservoir.lean",
+      "sha256": "00edd93ea1bfd464217121ed510a0393889de27f5a77c3d66dafb43cdab1f1ef",
+      "bytes": 3310,
+      "imports": [
+        "JSP000930NegativeDistinctDyadicCutRows",
+        "JSP000930PositiveActualReserveComplexPoint",
+        "JSP000930PositiveNativeGrowthNaturality",
+        "JSP000930PositiveExplicitCutValidityNaturality"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeLocalComplexTrial.lean",
+      "sha256": "04f167860f68a6186c23cbe92be89280d1f86f34f3353a9655a64ae8bffc4b42",
+      "bytes": 3144,
+      "imports": [
+        "JSP000930NegativePlacementPrefixReduction",
+        "JSP000930NegativeActualBulkReservoir"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeCofinalSiteRequestSchedule.lean",
+      "sha256": "4c1539bdf4797343d174b38f4d45c6bcf18eb8affaeba02cce031772b11de4c3",
+      "bytes": 1404,
+      "imports": [
+        "JSP000930NegativeActualBulkReservoir",
+        "JSP000930NegativeCheckedKappaCutTraceWeights"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeMixedCanonicalTrialCover.lean",
+      "sha256": "be19845ee5f88fce67cdb84ddeb83fe798fcf48e8a0d0baecb994d83825c95d7",
+      "bytes": 2341,
+      "imports": [
+        "JSP000930NegativeLocalComplexTrial",
+        "JSP000930NegativeCofinalSiteRequestSchedule"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeReadyTrialScheduling.lean",
+      "sha256": "10cd306aa174be56e8790475b6adf39e913fbda0f52891b1983e0f3763c4dc16",
+      "bytes": 3586,
+      "imports": [
+        "JSP000930NegativeMixedCanonicalTrialCover"
+      ]
+    },
+    {
+      "path": "src/JSP000930FixedWetzelReadyBook.lean",
+      "sha256": "0d6e8c3ff4378f3de062c04618ab10aaf6bb7845d03aaef590ca6761ef87df03",
+      "bytes": 1795,
+      "imports": [
+        "JSP000930ActualWetzelPlacementSystem",
+        "JSP000930NegativeReadyTrialScheduling"
+      ]
+    },
+    {
+      "path": "src/JSP000930HistoricalStepAdmission.lean",
+      "sha256": "5741cea111f4bd7ea73fc96bfd2639e02117005059639bb742ee55c936698d59",
+      "bytes": 3471,
+      "imports": [
+        "JSP000930FixedWetzelReadyBook"
+      ]
+    },
+    {
+      "path": "src/JSP000930HistoricalCertifiedStage.lean",
+      "sha256": "1ed872b7643f0a012bfcac2f6e86bb616ec1e4b7229244e653b2ed412af5e8d7",
+      "bytes": 5398,
+      "imports": [
+        "JSP000930HistoricalStepAdmission"
+      ]
+    },
+    {
+      "path": "src/JSP000930HistoricalNativeAdmission.lean",
+      "sha256": "110dfb9941d949fc86e9f7e0016eaa2cc1c49a4225ede4436f4474a2979b50ee",
+      "bytes": 2878,
+      "imports": [
+        "JSP000930HistoricalCertifiedStage"
+      ]
+    },
+    {
+      "path": "src/JSP000930HistoricalPlacementRectangles.lean",
+      "sha256": "5cad3efb9d96562fe58c215cd5287b9325f1fbf55dd100680846697509987480",
+      "bytes": 6386,
+      "imports": [
+        "JSP000930HistoricalNativeAdmission",
+        "JSP000933RelativeTraceEnumeration"
+      ]
+    },
+    {
+      "path": "src/JSP000930HistoricalReadyTrial.lean",
+      "sha256": "0a17360c688731ae00e45015af52cf8039bcba23f90921a52b6346b7bab9e975",
+      "bytes": 5144,
+      "imports": [
+        "JSP000930HistoricalPlacementRectangles"
+      ]
+    },
+    {
+      "path": "src/JSP000930IndependentActiveRowRestriction.lean",
+      "sha256": "285bd627cdd1d2dac6e4ea3a7d47f93886901c6172c8f065ce7a8d75c0bf177a",
+      "bytes": 2634,
+      "imports": [
+        "JSP000930HistoricalReadyTrial"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativePatchedPredenseCompleteMap.lean",
+      "sha256": "4c97274c46aa122bff29c0480ca9e24de25117cd2cfb69174cc39704f4caa6b1",
+      "bytes": 3912,
+      "imports": [
+        "JSP000930NegativeLocalTraceInclusion",
+        "JSP000930RegularOpenBasicCoherence"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativePatchedBasisDensity.lean",
+      "sha256": "7cf77837b11cb936cee171ade3fbfc5d2eb5c9fd3b5504dba5b750d4433fe97a",
+      "bytes": 3359,
+      "imports": [
+        "JSP000930NegativePatchedPredenseCompleteMap",
+        "JSP000933NativeBasePrefixCoherence"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativePreparedMaskedLimit.lean",
+      "sha256": "86cb86736d521604a5c8b003b6ba9fb6d1c8b65eb4846418f5bfcc57e5d0a9d2",
+      "bytes": 4754,
+      "imports": [
+        "JSP000930NegativePatchedBasisDensity",
+        "JSP000930PositiveMixedEnumerationInjection"
+      ]
+    },
+    {
+      "path": "src/JSP000930LocalPredensityComposition.lean",
+      "sha256": "fe02f8c22e03cc96a810da65be04c7457481b3ed364ba6f6313719bf48d65d37",
+      "bytes": 2535,
+      "imports": [
+        "JSP000930IndependentActiveRowRestriction",
+        "JSP000930NegativePreparedMaskedLimit"
+      ]
+    },
+    {
+      "path": "src/JSP000930LocalPredensityShrink.lean",
+      "sha256": "25d03bef8e16cb52bb5acd252fc6feb442f9ef1d8407e8152e4638eddb0ad72c",
+      "bytes": 2412,
+      "imports": [
+        "JSP000930LocalPredensityComposition"
+      ]
+    },
+    {
+      "path": "src/JSP000930MaskedPredensityTelescope.lean",
+      "sha256": "844b570b5f476976869d9c34c0914f6c52a2da4ddb32a3ac0a6fee98295227ad",
+      "bytes": 2921,
+      "imports": [
+        "JSP000930LocalPredensityShrink"
+      ]
+    },
+    {
+      "path": "src/JSP000930CheckedSuccessorsAndInfiniteTail.lean",
+      "sha256": "91b4f2d49a0c0174c85bc535a8f0c0cca570c27d080d13931614abddbd1390e2",
+      "bytes": 5093,
+      "imports": [
+        "JSP000930MaskedPredensityTelescope",
+        "Mathlib.SetTheory.Ordinal.Arithmetic"
+      ]
+    },
+    {
+      "path": "src/JSP000930HistoricalBulkReservoir.lean",
+      "sha256": "8aaf51d754a71b46b49eca04a4c76512db3c4c6d67fc3cc61859fc03789aabc1",
+      "bytes": 3635,
+      "imports": [
+        "JSP000930CheckedSuccessorsAndInfiniteTail"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualHistorySiteChoice.lean",
+      "sha256": "a39e8f68dbb46cad76c154197a5ef6c04c16be2169cf5fffe1d722a97f2c9761",
+      "bytes": 4775,
+      "imports": [
+        "JSP000930HistoricalBulkReservoir",
+        "JSP000930NegativeActualBulkReservoir"
+      ]
+    },
+    {
+      "path": "src/JSP000930HistoryRecursiveSites.lean",
+      "sha256": "651e00d15ceadede892a3f970e0f2e125c5e7dc745fe53f1b5f0c81aad588bfa",
+      "bytes": 2113,
+      "imports": [
+        "JSP000930ActualHistorySiteChoice"
+      ]
+    },
+    {
+      "path": "src/JSP000930NativeHistorySiteCoherence.lean",
+      "sha256": "9b304a748a7600cbc6e6f5abb0f9675adef53643e6c8036890939fbbb021ff01",
+      "bytes": 4793,
+      "imports": [
+        "JSP000930HistoryRecursiveSites"
+      ]
+    },
+    {
+      "path": "src/JSP000930NativeWetzelFinalSites.lean",
+      "sha256": "0898ecb9bb51e290712aa3964f3faa681101b81b1afc1afd9197565a9a352b96",
+      "bytes": 4706,
+      "imports": [
+        "JSP000930NativeHistorySiteCoherence",
+        "JSP000930NegativeLiteralFinalContinuum"
+      ]
+    },
+    {
+      "path": "src/JSP000930NativeWetzelFinalSiteCover.lean",
+      "sha256": "f6c926546597d5f2f40225582055bb96adbef834db5b245d260f42b0564571f8",
+      "bytes": 3650,
+      "imports": [
+        "JSP000930NativeWetzelFinalSites"
+      ]
+    },
+    {
+      "path": "src/JSP000930HistoricalWorkingAlgebra.lean",
+      "sha256": "1ad49b9e4f02a468e32e550515145687f2bde4e4562af81525c18fbb18569101",
+      "bytes": 4032,
+      "imports": [
+        "JSP000930NativeWetzelFinalSiteCover"
+      ]
+    },
+    {
+      "path": "src/JSP000930HistoricalWorkingPalettes.lean",
+      "sha256": "78f5b3cfe66a6742d74bdf58e780936c2620ae89389b4cff009330eb17e893c1",
+      "bytes": 2886,
+      "imports": [
+        "JSP000930HistoricalWorkingAlgebra",
+        "JSP000930CoherentPreparedPalettes"
+      ]
+    },
+    {
+      "path": "src/JSP000930ReadActualPastPalettes.lean",
+      "sha256": "51ad5b4f90551448a078ad547de5e93be1785b4c4ede3373d082c4e1e2e18dce",
+      "bytes": 5616,
+      "imports": [
+        "JSP000930HistoricalWorkingPalettes"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualNativeWorkingPolicy.lean",
+      "sha256": "46912c83a10ff0940c775ef7e9c69aa738b9273947eb960b3906b2a8faaa678e",
+      "bytes": 2802,
+      "imports": [
+        "JSP000930ReadActualPastPalettes"
+      ]
+    },
+    {
+      "path": "src/JSP000930NativePreparedHistoryCoherence.lean",
+      "sha256": "2dbc076cdbd76b2b260820702f2d95c8f76727d3028cfbb77d05d97bcf840181",
+      "bytes": 2347,
+      "imports": [
+        "JSP000930ActualNativeWorkingPolicy"
+      ]
+    },
+    {
+      "path": "src/JSP000930NativePreparedHistoryMasks.lean",
+      "sha256": "4a7d3aa94e02d27e4ecc9c3f0d214e99db7bfc53f95b54dfc0cf662c86601a3c",
+      "bytes": 3497,
+      "imports": [
+        "JSP000930NativePreparedHistoryCoherence"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualCreatedWorkingPalettes.lean",
+      "sha256": "d5107c97d668bd9479abe39632780f0bda3f1f1100310e56be68cbf85f7a9cf3",
+      "bytes": 3574,
+      "imports": [
+        "JSP000930NativePreparedHistoryMasks"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualWorkingNameTransport.lean",
+      "sha256": "2ae1bc0681ab72779981d6c1244bc3d7fc0c9d951a05a51524eae1ee87bad9f6",
+      "bytes": 4531,
+      "imports": [
+        "JSP000930ActualCreatedWorkingPalettes"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualInitialJointCCC.lean",
+      "sha256": "0ea37316bb9a66fc3ecb1633b182c2917277a6d9a397c1ef39ddc493d5427403",
+      "bytes": 3549,
+      "imports": [
+        "JSP000930ActualWorkingNameTransport"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualActiveRowFactorization.lean",
+      "sha256": "c86c80b6b282aaf5131ef7211f20c5f29ecf7fb6b6814fd510eefc8c5c98442e",
+      "bytes": 3090,
+      "imports": [
+        "JSP000930ActualInitialJointCCC"
+      ]
+    },
+    {
+      "path": "src/JSP000930RelativeCCCOrderIsoTransport.lean",
+      "sha256": "320bf0efdf0a9135dcf7a17ec0e79c1e4cba9fb25a01d936872fb24ea8806e91",
+      "bytes": 1973,
+      "imports": [
+        "JSP000930ActualActiveRowFactorization"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualWorkCohenIso.lean",
+      "sha256": "1e1dc4b6f34c03b1aff6139b8875cdb8e42420b882503299e085c4c144a01894",
+      "bytes": 3121,
+      "imports": [
+        "JSP000930RelativeCCCOrderIsoTransport"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualSurvivorOldDomain.lean",
+      "sha256": "92a6ed7f8fa8aa34c8d80ebab0d97dcf2f7e2abeac030b9b02037cc55d387876",
+      "bytes": 3658,
+      "imports": [
+        "JSP000930ActualWorkCohenIso"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualLiveSiteNames.lean",
+      "sha256": "581817965f3e7fac064eadedabe5ce0e6df47c38d470627924260471b506cf54",
+      "bytes": 3604,
+      "imports": [
+        "JSP000930ActualSurvivorOldDomain"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeNamedSpliceGuard.lean",
+      "sha256": "76a863880c43a95cc94fbfe20edcd4a4efbb0bb56bacd84432c931ded0b9abc1",
+      "bytes": 9869,
+      "imports": [
+        "JSP000930SymbolicPrecision",
+        "JSP000930ExpressionContextRename"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeSpliceExpressionRing.lean",
+      "sha256": "31155ae65b53a0a763feb23b67be04c27cadd8c3a260cf3736d4ffc1fb0c9a77",
+      "bytes": 3941,
+      "imports": [
+        "JSP000930NegativeNamedSpliceGuard"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeNamedSpliceCoefficients.lean",
+      "sha256": "ca6c07a54cd4820ae2450469b077e73d0d0284761e7ec3aca47eb6a1c5eb5958",
+      "bytes": 4980,
+      "imports": [
+        "JSP000930NegativeSpliceExpressionRing"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeSpliceAtomicValue.lean",
+      "sha256": "ddaa0b3b78f3ac8fffd61e8df64430ccca884721e1cc7b647dfa4af700ebb2c3",
+      "bytes": 4391,
+      "imports": [
+        "JSP000930NegativeNamedSpliceCoefficients"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeNamedSpliceCommonRefinement.lean",
+      "sha256": "049028f47dc292544c0541d4ce4ee8b307c41ce05f9833f131395c26abfb8df8",
+      "bytes": 9286,
+      "imports": [
+        "JSP000930NegativeSpliceAtomicValue",
+        "JSP000930NegativeNamedSpliceGuard"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeSpliceGuardRestriction.lean",
+      "sha256": "a9c447d33e839bef92879ab8999888c048257f0c1e0dc65fb654596c91014f43",
+      "bytes": 971,
+      "imports": [
+        "JSP000930NegativeNamedSpliceCommonRefinement"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeWeightedCountableCondensation.lean",
+      "sha256": "e1f60ae1c887acf786822f191ef1a8938089bd4a73b14d10f5205b8c58db2617",
+      "bytes": 1956,
+      "imports": [
+        "JSP000930NegativeRealPreparedRelativeDirectLimitCCC"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeWeightedSpliceCCC.lean",
+      "sha256": "8c0eaf3384e69c1c6366edc19e669cd7dd223db1c289902f6cac73c93e9b1679",
+      "bytes": 2872,
+      "imports": [
+        "JSP000930NegativeWeightedCountableCondensation"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeCountableNamedCenterBins.lean",
+      "sha256": "ff2fe0b52baa2ede566e1f672eb55733afa754cf2eb98ba7fb931ab93d35c652",
+      "bytes": 2336,
+      "imports": [
+        "JSP000930NegativeSpliceGuardRestriction",
+        "JSP000930MarkedOnePinRefinement",
+        "JSP000930NegativeWeightedSpliceCCC"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeSupportedNamedRowTightening.lean",
+      "sha256": "b7b0ee6962ad85687661ef97541064d1952504aee349f400f7fb820f41e33d4a",
+      "bytes": 4444,
+      "imports": [
+        "JSP000930NegativeCountableNamedCenterBins",
+        "JSP000930SymbolicTrimCommonRefinement"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeActualNamedCellCoverage.lean",
+      "sha256": "be30743bbcb00a771334885474acced72693afedd5ccc94aa757afe3cb3d07c2",
+      "bytes": 3281,
+      "imports": [
+        "JSP000930NegativeSupportedNamedRowTightening"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeGenuineSameBinSplice.lean",
+      "sha256": "4e1255e365e26cb0c06a9effa598775fcbd495d47695b28d65806f1abd71e942",
+      "bytes": 4725,
+      "imports": [
+        "JSP000930NegativeActualNamedCellCoverage"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeActualNamedRowCondensation.lean",
+      "sha256": "eb77152813088c3f62e0d2553e570888d5eeefb38d0c4f277aef3b5bc109ea5d",
+      "bytes": 4487,
+      "imports": [
+        "JSP000930NegativeGenuineSameBinSplice"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeActualUnchangedProductRows.lean",
+      "sha256": "36f2007e250637083b0809692208dbfd430e80aa6094bf6b942281317382469e",
+      "bytes": 3128,
+      "imports": [
+        "JSP000930NegativeActualNamedRowCondensation",
+        "JSP000930MarkedAnalyticRowProduct"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeWeightedDenseLabelEquivalence.lean",
+      "sha256": "d9644da21e16894784256d459f028bc64b6f6e44f3a922a46c8c92406837201b",
+      "bytes": 4354,
+      "imports": [
+        "JSP000930NegativeActualUnchangedProductRows"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeActualNormalizedSingleFibre.lean",
+      "sha256": "d871d5fe2cf5657751ed29451723eeb1113ebea69c881fe16e073db77e7bbafa",
+      "bytes": 2907,
+      "imports": [
+        "JSP000930NegativeWeightedDenseLabelEquivalence",
+        "JSP000930SymbolicTraceDensity",
+        "JSP000930SymbolicSupportedForcing"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeNormalizedOneFibreRowProduct.lean",
+      "sha256": "be8d2196c988d3307e4e6c25477fc15c735aab62896349303c2988515eb979de",
+      "bytes": 2800,
+      "imports": [
+        "JSP000930NegativeActualNormalizedSingleFibre"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeActualPointedR121Product.lean",
+      "sha256": "09cb14977ed547b1c734261305db6b58e12211643ebea07ad47a41f307393ef3",
+      "bytes": 2709,
+      "imports": [
+        "JSP000930NegativeNormalizedOneFibreRowProduct"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeCountableSupportedRowUnion.lean",
+      "sha256": "d52cbe6495c0b3c29e3522415be2eb84401d78fe8e2e17cc50bc17aa15567d98",
+      "bytes": 1704,
+      "imports": [
+        "JSP000930NegativeActualPointedR121Product"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticFiniteSupportCutoff.lean",
+      "sha256": "63712a4dcc0f0ae4598dfaac3254e932bdf0474ff88e260a758a1985df9167ab",
+      "bytes": 2372,
+      "imports": [
+        "JSP000930OldRawRefinementTransport"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeActualFiniteRowCountableFibres.lean",
+      "sha256": "9518595300e3a11d4faa45e92e5207874befb06f04ec3390c803fe53b132dd14",
+      "bytes": 3209,
+      "imports": [
+        "JSP000930NegativeCountableSupportedRowUnion",
+        "JSP000930AnalyticFiniteSupportCutoff"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeNativeDistinguishedCoordinate.lean",
+      "sha256": "5f2dcea4ce318756b0831fa20ded54689d67ed1da5fa41d5a232fc2a6086f34d",
+      "bytes": 2413,
+      "imports": [
+        "JSP000930NegativeActualFiniteRowCountableFibres",
+        "Mathlib.Logic.Equiv.Basic"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeActualArbitraryRowCountableExpansion.lean",
+      "sha256": "dac2a0f29017e6efa233792ef65691a64bedc2e1d4706b99fa404673f4034f63",
+      "bytes": 4067,
+      "imports": [
+        "JSP000930NegativeNativeDistinguishedCoordinate"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualWetzelSuccessorInvariant.lean",
+      "sha256": "c25539e7bdcf389d34d586a0fc638bd7ad5a453903b9f221bcf72f7dcb3b6235",
+      "bytes": 4946,
+      "imports": [
+        "JSP000930ActualLiveSiteNames",
+        "JSP000930NegativeActualArbitraryRowCountableExpansion"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualNativeWetzelLimitBases.lean",
+      "sha256": "c63474e663b6abfd5d2814e69630371338c4fd7cffc67e7194cd1da94ded3d66",
+      "bytes": 6230,
+      "imports": [
+        "JSP000930ActualWetzelSuccessorInvariant",
+        "JSP000930NegativeRealPreparedRelativeDirectLimitCCC"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualPureNativeCCC.lean",
+      "sha256": "ecaf079838067e2a216bbf8d99afc241e13c31626bb35a137fc9806ec7ba9b04",
+      "bytes": 4957,
+      "imports": [
+        "JSP000930ActualNativeWetzelLimitBases"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeTwoStepAdmissibility.lean",
+      "sha256": "9dcfa4cb5b66c2c472a8e561135d67f22188f24c4197b6ed43c02375db8099b6",
+      "bytes": 4412,
+      "imports": [
+        "JSP000933RelativeTraceEnumeration",
+        "JSP000933DenseForcingMap"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeActualTwoStepDenseMap.lean",
+      "sha256": "13660b038d672f5e59b0cc3bd9556f41681ce05f27d482f7f7e52d16000b319c",
+      "bytes": 4126,
+      "imports": [
+        "JSP000930NegativeTwoStepAdmissibility"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeTwoStepBaseCoherence.lean",
+      "sha256": "07c0aa5814112793d2d7571e4ec4ded4e0b5983b61e3f4a366c787a7047b15b3",
+      "bytes": 1363,
+      "imports": [
+        "JSP000930NegativeActualTwoStepDenseMap"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeComposedBaseProjection.lean",
+      "sha256": "fa2b995c7065f6ccafe25f0ec0b8290c7f89743e06c158ef07f0993c56dc59e9",
+      "bytes": 1012,
+      "imports": [
+        "JSP000930NegativeTwoStepBaseCoherence"
+      ]
+    },
+    {
+      "path": "src/JSP000930RelativeAugmentedSurvivorCCC.lean",
+      "sha256": "316b9245a8536b1669ffd8c811bf4c44e1d5f6958c6010830a8f6d805398d5c2",
+      "bytes": 3646,
+      "imports": [
+        "JSP000930ActualPureNativeCCC",
+        "JSP000930NegativeComposedBaseProjection"
+      ]
+    },
+    {
+      "path": "src/JSP000930ExactNativeWetzelTraceMaps.lean",
+      "sha256": "4c05bdf0093946d208f26ae2ed2dbef99b17f80a3602c8838d81542d259e6a1a",
+      "bytes": 4484,
+      "imports": [
+        "JSP000930RelativeAugmentedSurvivorCCC"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualAugmentedTestPosets.lean",
+      "sha256": "1310f51fd92a2310e6ce7dbdbfca594f9180b664c104ff894a4c06f9e6b2808c",
+      "bytes": 6172,
+      "imports": [
+        "JSP000930ExactNativeWetzelTraceMaps"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualAugmentedTraceInclusion.lean",
+      "sha256": "0dba3c706687f893965d381b999731b6930e7720e5524edcaf744f622f8bca00",
+      "bytes": 4727,
+      "imports": [
+        "JSP000930ActualAugmentedTestPosets"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualAugmentedFiniteSupport.lean",
+      "sha256": "7fead72a08aaa3ecd420be47950afb8b6d9bf8f8979a72414b47c10436efe30f",
+      "bytes": 3720,
+      "imports": [
+        "JSP000930ActualAugmentedTraceInclusion"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualCountableJointLimit.lean",
+      "sha256": "241241d307fcc653658d8e906b44ce6ddc428c4fa29e2b233bc6f436897951cd",
+      "bytes": 2474,
+      "imports": [
+        "JSP000930ActualAugmentedFiniteSupport"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualAugmentedCompatibility.lean",
+      "sha256": "a3e170bdada8b061e0ddd10cff7a9882a41dcbd76d7d4128994d4d68194f75a8",
+      "bytes": 5970,
+      "imports": [
+        "JSP000930ActualCountableJointLimit"
+      ]
+    },
+    {
+      "path": "src/JSP000930DensePredensityConjugacy.lean",
+      "sha256": "aaf2f4d0d4de9cca16a1638b3dd9306dce8c898a5f27e654770baa8f4d63f7bd",
+      "bytes": 2300,
+      "imports": [
+        "JSP000930ActualAugmentedCompatibility"
+      ]
+    },
+    {
+      "path": "src/JSP000930IndependentActiveMarkedPredensity.lean",
+      "sha256": "ec29ac55f1559b7cded85ef43b95d98b0b61b1288f79360f254c6336bc79764d",
+      "bytes": 3567,
+      "imports": [
+        "JSP000930DensePredensityConjugacy"
+      ]
+    },
+    {
+      "path": "src/JSP000930MarkedOrderIsoCharts.lean",
+      "sha256": "c4a5a7d84a7824b92217714085bcc7ca30d04c88a97fa424b231ed6d8831c9fd",
+      "bytes": 2511,
+      "imports": [
+        "JSP000930IndependentActiveMarkedPredensity"
+      ]
+    },
+    {
+      "path": "src/JSP000930AugmentedActualHistoryChart.lean",
+      "sha256": "ed0eb0839638cf026651e0660c4dc28f1e4fa6cd9e9b13012d9ad094ecda1edc",
+      "bytes": 4054,
+      "imports": [
+        "JSP000930MarkedOrderIsoCharts"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualBeforeFreshCohen.lean",
+      "sha256": "6a9de382e3f01a2dabb6b953d279a19ad19d73935416477a2ad3f4420c651260",
+      "bytes": 4800,
+      "imports": [
+        "JSP000930AugmentedActualHistoryChart"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualFreshCohenStep.lean",
+      "sha256": "f1b614c49111a2102cde0e4ffdcca5fc3ea3efd976a7c8864d4c98122c45dc30",
+      "bytes": 4278,
+      "imports": [
+        "JSP000930ActualBeforeFreshCohen"
+      ]
+    },
+    {
+      "path": "src/JSP000930FreshCohenToActualStage.lean",
+      "sha256": "127fa1c87586fbc061dc93ad5e57eb66b711dc52c65be2493b4f2da961c5c878",
+      "bytes": 2589,
+      "imports": [
+        "JSP000930ActualFreshCohenStep"
+      ]
+    },
+    {
+      "path": "src/JSP000930FreshCohenNativeMarkedChart.lean",
+      "sha256": "97e711963c93196fc8616e8435182a22bee4c0d520fd3ae468e1c2dea90ae8af",
+      "bytes": 4380,
+      "imports": [
+        "JSP000930FreshCohenToActualStage"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualAugmentedMarkedSuccessor.lean",
+      "sha256": "eda98cf347fe91d023b5249a3e5875dd0bcc6e4f189caab44d8e16ccb91cbe3b",
+      "bytes": 3680,
+      "imports": [
+        "JSP000930FreshCohenNativeMarkedChart"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualAugmentedTailDensity.lean",
+      "sha256": "5fdbc52b8b5ebbbdc8ef2064d6f2ef1c8006de7c15d8640013d188aab9230898",
+      "bytes": 2518,
+      "imports": [
+        "JSP000930ActualAugmentedMarkedSuccessor"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualMarkedTailTelescope.lean",
+      "sha256": "f3a56e97ef5850e870ee5aa79264731e4e8ce9279874b54ffc98c49fb1cd9b3d",
+      "bytes": 2637,
+      "imports": [
+        "JSP000930ActualAugmentedTailDensity"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualMaskedSurvivorTower.lean",
+      "sha256": "93f8367fef5c8a1187555bf59894db4b234d607c96623ab3e441402def629164",
+      "bytes": 2055,
+      "imports": [
+        "JSP000930ActualMarkedTailTelescope"
+      ]
+    },
+    {
+      "path": "src/JSP000930AnalyticFiniteSupportLimit.lean",
+      "sha256": "b849e798e235090065c66481db0197626b7298b6f980f345cc4e6e78e302842f",
+      "bytes": 2563,
+      "imports": [
+        "JSP000930AnalyticFiniteSupportCutoff"
+      ]
+    },
+    {
+      "path": "src/JSP000930CheckedRankPreimagesInClosedBase.lean",
+      "sha256": "c27126761db93685d665f8e896701b82e7cb766c0339ef59bca85a1b19a82e7d",
+      "bytes": 3642,
+      "imports": [
+        "JSP000930AnalyticFiniteSupportLimit",
+        "JSP000930CoherentPreparedPalettes",
+        "JSP000933CountableChoiceProfiles"
+      ]
+    },
+    {
+      "path": "src/JSP000930CheckedPalettePairCut.lean",
+      "sha256": "239300cfe238d79d7dbc783f1d6f9d91270a6a9097d7935a0a9aac7d4276aaa7",
+      "bytes": 3585,
+      "imports": [
+        "JSP000930CheckedRankPreimagesInClosedBase"
+      ]
+    },
+    {
+      "path": "src/JSP000930PreparedPaletteCheckedTailCover.lean",
+      "sha256": "efaef0066bb57d43a825ae8d7b7914dc68faf43ab13d7f23bc17aed52b5154c8",
+      "bytes": 2891,
+      "imports": [
+        "JSP000930CheckedPalettePairCut",
+        "JSP000933PreparedSmallTraceEnum",
+        "JSP000933PreparedProduct"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualPreparedTailMasks.lean",
+      "sha256": "f3c813320730c3bcf925ba9c9c50608675097c55d0174fd9891a864f66c44e36",
+      "bytes": 3315,
+      "imports": [
+        "JSP000930ActualMaskedSurvivorTower",
+        "JSP000930PreparedPaletteCheckedTailCover"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualJointUncountableLimit.lean",
+      "sha256": "dcefaf75cfc369f3ca595857cccdac6d2108e3f540033bf7292c74e5f76cc315",
+      "bytes": 2201,
+      "imports": [
+        "JSP000930ActualPreparedTailMasks"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualWetzelAllStagesCCC.lean",
+      "sha256": "3e50015f0492cff34be8058af4f53d5952ec3bbe55e97c17756e6a7c8bbbafb2",
+      "bytes": 2312,
+      "imports": [
+        "JSP000930ActualJointUncountableLimit"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeSupportedLogChart.lean",
+      "sha256": "ea33ca15acc7a8a86b4afbef8535a9c3bb0ffb84e34b7eb63d78db6b0ced5b82",
+      "bytes": 4484,
+      "imports": [
+        "JSP000930SymbolicSupportedForcing",
+        "Mathlib.Data.List.OfFn"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeSupportedLogEvaluation.lean",
+      "sha256": "da7313a1676739bc7ecdf6769d8b5fc1460af37df922f88f6eeb96b0899a398d",
+      "bytes": 4921,
+      "imports": [
+        "JSP000930NegativeSupportedLogChart"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeSupportedRowEmbedding.lean",
+      "sha256": "45fd6713ec0011dd1e9e0b393a7751f962f13c70635980c6f49cb85a299ae0e8",
+      "bytes": 9227,
+      "imports": [
+        "JSP000930NegativeSupportedLogEvaluation",
+        "JSP000930FixedTaggedStageForcing",
+        "JSP000930NegativeActualFineTower"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativePolynomialTowerEndpoint.lean",
+      "sha256": "43a91a6e98c34eb0585b253cebb00b70c983d5a6763ad98ca23c7c7249aa5afa",
+      "bytes": 6318,
+      "imports": [
+        "JSP000930NegativePolynomialNamedGrid"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativePolynomialActiveApprox.lean",
+      "sha256": "7224229848b128c3d95f4499866be31bb4473faa7a414f85366ffb68e00e5598",
+      "bytes": 2284,
+      "imports": [
+        "JSP000930NegativePolynomialTowerEndpoint"
+      ]
+    },
+    {
+      "path": "src/JSP000930GenericPinnedTraceBound.lean",
+      "sha256": "24b6f7a0c08f68bf403ce067f5adebfef265cebaa316baae02592b20e6b8b96d",
+      "bytes": 3527,
+      "imports": [
+        "JSP000930NamedDistanceCongruence",
+        "JSP000930GenericFineTraceCovers"
+      ]
+    },
+    {
+      "path": "src/JSP000930GenericPinnedNamedPoint.lean",
+      "sha256": "cc5299a782ea9e0bf640eacec5866f6d4f4f609c68d6c425bd50cedf93a899b6",
+      "bytes": 1188,
+      "imports": [
+        "JSP000930GenericPinnedTraceBound",
+        "JSP000930NegativePolynomialNamedGrid"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativePolynomialActualPin.lean",
+      "sha256": "e877e166126a3b7ec29b1cf71a082ab332f5fb0acf8c4fb9db7f546646bc14c2",
+      "bytes": 5708,
+      "imports": [
+        "JSP000930NegativePolynomialActiveApprox",
+        "JSP000930GenericPinnedNamedPoint"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeActualTowerPaletteValues.lean",
+      "sha256": "0598ae928f819e3448261f09ac035c979b640a784693428678642f98a649452e",
+      "bytes": 2262,
+      "imports": [
+        "JSP000930NegativePolynomialActualPin",
+        "JSP000930GenericPins"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeTransportedCohenPalette.lean",
+      "sha256": "5befb98783f7a2ae84b6e50afbb1c4b651b80eb9bc3b28884ffd6dbf3145ad67",
+      "bytes": 6797,
+      "imports": [
+        "JSP000930ActualDenseCohenPalettes",
+        "JSP000930AbsoluteCutArithmetic",
+        "JSP000930NegativePinAvoidance"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeTransportedMixedPalette.lean",
+      "sha256": "23d557deb3cfe96c45c9a16b187f63f699d8e5606c6a137881d7c4c8f95a9e44",
+      "bytes": 3690,
+      "imports": [
+        "JSP000930NegativeTransportedCohenPalette",
+        "JSP000930ActualMixedFreshPalettes",
+        "JSP000930NamedDistanceCongruence"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeNativeCodeTransport.lean",
+      "sha256": "eb9e5127fc4e5d96feab8484bb6ca30928d7059a467b3aa70650a7f1ae59770e",
+      "bytes": 4586,
+      "imports": [
+        "JSP000930NegativePolynomialActualPin"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeLiteralCodeTransport.lean",
+      "sha256": "fda073941aaa1f1e284980fa71ca13d12eaa403f4c07f53366a743f3eefb503c",
+      "bytes": 5090,
+      "imports": [
+        "JSP000930NegativeNativeCodeTransport"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeActualCohenAvoidance.lean",
+      "sha256": "7cd1e390b86d641a8e111b4ede3d309f0a7c25ab4c3c8a0b649ab2303a40bf07",
+      "bytes": 5210,
+      "imports": [
+        "JSP000930ActualDenseCohenPalettes",
+        "JSP000930NegativePinAvoidance"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeFineTowerApartOld.lean",
+      "sha256": "96c897edddd5a344e7392440ad9ff1fac0058017b2a0fe2166a50bee5c226cd4",
+      "bytes": 5438,
+      "imports": [
+        "JSP000930NegativeLiteralCodeTransport",
+        "JSP000930NegativeActualCohenAvoidance"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeFineTowerApartTransport.lean",
+      "sha256": "fbd176a267536805e1a263fdd4fe039c8265fe74159fede7e70ed42d29b4644c",
+      "bytes": 2750,
+      "imports": [
+        "JSP000930NegativeFineTowerApartOld",
+        "JSP000930PositiveSubmodelTaylorNameTransport"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeNativeWorkingTaylor.lean",
+      "sha256": "c9a5e13b289e001865fc54e584b77af6863703cc6eafc082dd5bc94d5bd57117",
+      "bytes": 6017,
+      "imports": [
+        "JSP000930NegativeSupportedRowEmbedding",
+        "JSP000930NegativeActualTowerPaletteValues",
+        "JSP000930NegativeTransportedMixedPalette",
+        "JSP000930NegativeFineTowerApartTransport",
+        "JSP000930ActualLiveSiteNames"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeNativeWorkingTaylorOutputs.lean",
+      "sha256": "b80cdb564bdfa986cee63ff139e40899d519301806de2fc29faf4f19bd4d0678",
+      "bytes": 5019,
+      "imports": [
+        "JSP000930NegativeNativeWorkingTaylor"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeFinalWorkingTaylor.lean",
+      "sha256": "241d3fd31106005a681291aa7c72e6384d411206050cd9253b11c631d6d34914",
+      "bytes": 7674,
+      "imports": [
+        "JSP000930NegativeNativeWorkingTaylorOutputs"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeActualNamedPaletteSchedule.lean",
+      "sha256": "21dc6bc4b7df13a6c946a6c128a0c4e86f30b58ec4b3a5dbc086846b834651bd",
+      "bytes": 4332,
+      "imports": [
+        "JSP000930NegativeFinalWorkingTaylor",
+        "JSP000930NegativeNamedPaletteScheduleCardinals"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveLiteralAnalyticLawFromEvalCorrespondence.lean",
+      "sha256": "ee22ecf169f8359451aec52bb16c6e23bc61f8cab97a861e885a9f386b2c1ec5",
+      "bytes": 4413,
+      "imports": [
+        "JSP000930PositiveCanonicalNativeGrowthForcesLiteralEntire"
+      ]
+    },
+    {
+      "path": "src/JSP000930PositiveClosedPositiveCohenModel.lean",
+      "sha256": "2150d10e7d844b59cbcc07a8544fe3e2137220c326cb77e8c1ae31236b67a325",
+      "bytes": 790,
+      "imports": [
+        "JSP000930PositiveLiteralAnalyticLawFromEvalCorrespondence",
+        "JSP000930AnalyticLiteralEvaluation"
+      ]
+    },
+    {
+      "path": "src/JSP000930ActualPositiveLiteralConsistency.lean",
+      "sha256": "034df8037231d12c0bcf59498efaf5814978ade29c4d2e36e9d0ce661a4b484e",
+      "bytes": 2172,
+      "imports": [
+        "JSP000930PositiveClosedPositiveCohenModel"
+      ]
+    },
+    {
+      "path": "src/JSP000930ConditionalNegativeLiteralConsistency.lean",
+      "sha256": "cc9895c597a809e5b9ac122c07def9391481375b1efa9043e95d087b35b476d9",
+      "bytes": 1823,
+      "imports": [
+        "JSP000930ActualPositiveLiteralConsistency"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeLiteralEntireAndCanonicalEvaluation.lean",
+      "sha256": "7a174d2ca9503cf5521e1686e3fde56c411b557e2c9e65acf74c7702eb6656d8",
+      "bytes": 2375,
+      "imports": [
+        "JSP000930NegativeNamedPaletteScheduleCardinals",
+        "JSP000930PositiveCanonicalNativeGrowthForcesLiteralEntire",
+        "JSP000930AnalyticLiteralEvaluation"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeExactSiteEvalImage.lean",
+      "sha256": "f34e3275b6534307a6ab97fd8589354b7a0231c4b6e0f243b6ac16ab45c80787",
+      "bytes": 4076,
+      "imports": [
+        "JSP000930NegativeLiteralEntireAndCanonicalEvaluation"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeLiteralAllComplexPointwiseCap.lean",
+      "sha256": "a26eda888574e9d8b72118443c33a9d900191eb62042d0444a65b914b1beaccd",
+      "bytes": 2802,
+      "imports": [
+        "JSP000930NegativeExactSiteEvalImage"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeLiteralHaymanRefutation.lean",
+      "sha256": "93415a9d7ec2069a6dfdcb1f76111b373abb7f4c375757b7d6516910253f3b2a",
+      "bytes": 4458,
+      "imports": [
+        "JSP000930NegativeLiteralAllComplexPointwiseCap"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeLiteralNegativeIterationAssembly.lean",
+      "sha256": "cbeb7517339eba88df30dca665796de2df3e8e2dffd68bd88c014b989810efa9",
+      "bytes": 1181,
+      "imports": [
+        "JSP000930NegativeLiteralHaymanRefutation"
+      ]
+    },
+    {
+      "path": "src/JSP000930NegativeIterationLiteralConsistencyReceiver.lean",
+      "sha256": "92a16679fca454872595eff35fa3362e4709188a00cff442e9437c3ffc8e4bcd",
+      "bytes": 1491,
+      "imports": [
+        "JSP000930ConditionalNegativeLiteralConsistency",
+        "JSP000930NegativeLiteralNegativeIterationAssembly"
+      ]
+    },
+    {
+      "path": "src/JSP000930RelativeIndependence.lean",
+      "sha256": "a292da92bae3a043c5d5e0a0157e44781db7386334b117b1134eec4fc3dbd09c",
+      "bytes": 2008,
+      "imports": [
+        "JSP000930ActualWetzelAllStagesCCC",
+        "JSP000930NegativeActualNamedPaletteSchedule",
+        "JSP000930NegativeIterationLiteralConsistencyReceiver"
+      ]
+    }
+  ]
+}

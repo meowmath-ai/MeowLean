@@ -26,6 +26,8 @@ The cache command retrieves precompiled Mathlib artifacts. Run the proof command
 
 [JSP-000060 / Erdős 27](solutions/JSP-000060.md) formalizes the fixed-ratio uniform density theorem of Filaseta, Ford, Konyagin, Pomerance, and Yu. The main theorem is `JSP000060.erdos27_fixed_ratio_uniform`.
 
+[JSP-000930 / Erdős 1119](solutions/JSP-000930.md) formalizes the ZFC independence of the Hayman question for families of entire functions. Its main theorem is `JSP000930.Consistency.hayman_1119_relative_independence`.
+
 [JSP-000933 / Erdős 1123](solutions/JSP-000933.md) formalizes the ZFC independence of the isomorphism question for the two density quotients. Its main theorem is `JSP000933.SetLanguage.erdos1123_densityQuotients_relative_independence`.
 
 ## Attribution

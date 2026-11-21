@@ -1,0 +1,5 @@
+import JSP000930ActualPositiveLiteralConsistency
+
+#check JSP000930.Positive.Cohen.wetzelCohen_forces_haymanAtAlephTwo
+#print axioms JSP000930.Positive.Cohen.wetzelCohen_forces_haymanAtAlephTwo
+#print axioms JSP000930.Consistency.wetzelCohen_consistent_ZFC_plus_alephTwo_plus_haymanBound

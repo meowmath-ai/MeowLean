@@ -1,0 +1,8 @@
+import JSP000930RelativeIndependence
+
+#check JSP000930.Consistency.hayman_1119_relative_independence
+#print axioms JSP000930.Positive.Cohen.wetzelCohen_forces_haymanAtAlephTwo
+#print axioms JSP000930.Consistency.wetzelCohen_consistent_ZFC_plus_alephTwo_plus_haymanBound
+#print axioms JSP000930.Consistency.actualWetzel_forces_negative_atAlephTwo
+#print axioms JSP000930.Consistency.hayman_1119_literal_independence_and_same_continuum
+#print axioms JSP000930.Consistency.hayman_1119_relative_independence

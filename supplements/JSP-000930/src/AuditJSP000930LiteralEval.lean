@@ -1,0 +1,11 @@
+import JSP000930ActualHaymanSentence
+import JSP000930PositiveExactEvalCorrespondenceInterface
+import JSP000930AnalyticLiteralEvaluation
+
+#check JSP000930.SetLanguage.haymanBound_f
+#check JSP000930.Positive.LiteralTaylorEvalCorrespondence
+#check JSP000930.AnalyticSyntax.forces_evalAt_iff_taylorLimit
+#check JSP000930.AnalyticSyntax.literalTaylorEvalCorrespondence
+
+#print axioms JSP000930.AnalyticSyntax.forces_evalAt_iff_taylorLimit
+#print axioms JSP000930.AnalyticSyntax.literalTaylorEvalCorrespondence
